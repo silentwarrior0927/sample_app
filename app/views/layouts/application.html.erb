@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title><%= full_title(yield(:title)) %></title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<!--<%= link_to "sample app", '#', id: "logo" %> -->
+					
+			<% if signed_in? %>
+			
+				<ul class="nav pull-right" style="font-size:12px">
+					<li><%= link_to "Search", '#' %></li>
+				</ul>
+
+			<% else %>
+
+				<%= form_for(:session, url: sessions_path, :html => { :style => "float:right; margin:0; overflow:hidden; color:#ccc" } ) do |f| %>
+					<table>
+						<tr>
+							<td><%= f.label :email %></td>
+							<td><%= f.label :password %></td>
+						</tr>
+						<tr>
+							<td><%= f.text_field :email, id: "sign-in" %></td>
+							<td><%= f.password_field :password, id: "sign-in" %></td>
+							<td style="padding:0" valign="top"><%= f.submit "Log in", class: "btn btn-small btn-primary" %></td>
+						</tr>
+					</table>
+				<% end %>
+
+				<% flash.each do |key, value| %>
+					<div style="float:right; margin-right:2px; padding:0px 3px; border:3px dashed #ccc; color:#ccc; font-size:12px; text-align:center"><%= value %>
+					</div>
+				<% end %>
+				
+			<% end %>
+
+		</div>
+	</div>
+</header>
+
+<%= yield %>
+
+
+<div class="container">
+  <%= debug(params) if Rails.env.development? %>
+</div>
+
+</body>
+
+</html>

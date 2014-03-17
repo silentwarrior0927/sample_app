@@ -1,0 +1,147 @@
+/* BOOTSTRAP OVERRIDES */
+
+/* primary button */
+$btnPrimaryBackground:          #6959af !default;
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 20%) !default;
+$btnBorder:#fff;
+
+/* font */
+$sansFontFamily:                Arial, sans-serif !default;
+
+/* END BOOTSTRAP OVERRIDES */
+
+/*@import "bootstrap";*/
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 0px;
+  background-color: #362F2D;
+}
+
+div {
+  overflow: hidden;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  margin:0;
+  font-size: 3em;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* BOOTSTRAP OVERRIDES */
+
+/* input fields */
+select, textarea, input[type="text"], input[type="password"] {
+  height: 12px;
+  line-height: 12px;
+  margin: 0px 0px 3px 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #ccc;
+}
+
+/* navbar */
+
+/* navbar color */
+.navbar-inverse .navbar-inner {
+  background-color: #362F2D;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* navbar font color */
+.navbar .nav > li > a {
+  color: #ccc;
+}
+
+/* sign-in boxes' labels */
+label, input, button, select, textarea {
+  line-height: 12px;
+  margin: 3px 0px 0px 0px;
+  font-size: 12px;
+}
+
+/* sign-in boxes' input fields */
+#sign-in {
+  width: 133px;
+  margin: 0px 0px 3px 0px;
+  font-size: 12px;
+}
+
+/* sign-in button */
+.navbar .btn, .navbar .btn-group {
+  margin: 0px 0px 0px 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* search field */
+#search {
+  margin: 0px 0px 6px 0px;
+  font-size: 15px;
+}
+
+/* END BOOTSTRAP OVERRIDES */
