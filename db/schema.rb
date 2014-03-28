@@ -11,10 +11,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314032847) do
+ActiveRecord::Schema.define(version: 20140326014835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sales", force: true do |t|
+    t.date     "bankruptcy_filing_date",                     default: [], array: true
+    t.text     "debtor",                                     default: [], array: true
+    t.integer  "chapter",                                    default: [], array: true
+    t.text     "assets",                                     default: [], array: true
+    t.text     "stalking_horse_parent",                      default: [], array: true
+    t.text     "stalking_horse",                             default: [], array: true
+    t.integer  "stalking_horse_bid_1",                       default: [], array: true
+    t.text     "stalking_horse_bid_text",                    default: [], array: true
+    t.integer  "breakup_fee_1",                              default: [], array: true
+    t.integer  "breakup_fee_2",                              default: [], array: true
+    t.text     "breakup_fee_text",                           default: [], array: true
+    t.integer  "required_overbid_1",                         default: [], array: true
+    t.integer  "required_overbid_2",                         default: [], array: true
+    t.text     "required_overbid_text",                      default: [], array: true
+    t.text     "bidder_list",                                default: [], array: true
+    t.text     "winner_parent",                              default: [], array: true
+    t.text     "winner",                                     default: [], array: true
+    t.integer  "winning_bid_1",                              default: [], array: true
+    t.text     "winning_bid_text",                           default: [], array: true
+    t.text     "judge",                                      default: [], array: true
+    t.text     "court",                                      default: [], array: true
+    t.text     "debtor_counsel",                             default: [], array: true
+    t.text     "stalking_horse_counsel",                     default: [], array: true
+    t.date     "bidding_procedures_order_filed",             default: [], array: true
+    t.date     "sale_order_filed",                           default: [], array: true
+    t.date     "bankruptcy_case_closed",                     default: [], array: true
+    t.text     "comments_on_bankruptcy_filing_date",         default: [], array: true
+    t.text     "comments_on_debtor",                         default: [], array: true
+    t.text     "comments_on_chapter",                        default: [], array: true
+    t.text     "comments_on_assets",                         default: [], array: true
+    t.text     "comments_on_stalking_horse_parent",          default: [], array: true
+    t.text     "comments_on_stalking_horse",                 default: [], array: true
+    t.text     "comments_on_stalking_horse_bid_1",           default: [], array: true
+    t.text     "comments_on_stalking_horse_bid_text",        default: [], array: true
+    t.text     "comments_on_breakup_fee_1",                  default: [], array: true
+    t.text     "comments_on_breakup_fee_text",               default: [], array: true
+    t.text     "comments_on_required_overbid_1",             default: [], array: true
+    t.text     "comments_on_required_overbid_text",          default: [], array: true
+    t.text     "comments_on_bidder_list",                    default: [], array: true
+    t.text     "comments_on_winner_parent",                  default: [], array: true
+    t.text     "comments_on_winner",                         default: [], array: true
+    t.text     "comments_on_winning_bid_1",                  default: [], array: true
+    t.text     "comments_on_winning_bid_text",               default: [], array: true
+    t.text     "comments_on_judge",                          default: [], array: true
+    t.text     "comments_on_court",                          default: [], array: true
+    t.text     "comments_on_debtor_counsel",                 default: [], array: true
+    t.text     "comments_on_stalking_horse_counsel",         default: [], array: true
+    t.text     "comments_on_bidding_procedures_order_filed", default: [], array: true
+    t.text     "comments_on_sale_order_filed",               default: [], array: true
+    t.text     "comments_on_bankruptcy_case_closed",         default: [], array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "fname"
