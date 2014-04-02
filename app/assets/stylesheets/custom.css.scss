@@ -94,12 +94,12 @@ p {
 
 /* input fields */
 select, textarea, input[type="text"], input[type="password"] {
-  height: 12px;
-  line-height: 12px;
-  margin: 0px 0px 3px 0px;
-  padding-left: 2px;
-  padding-right: 2px;
-  background-color: #ccc;
+  height: 12px !important;
+  line-height: 12px !important;
+  margin: 0px 0px 3px 0px !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  background-color: #ccc !important;
 }
 
 /* navbar */
@@ -139,9 +139,33 @@ label, input, button, select, textarea {
 }
 
 /* search field */
-#search {
-  margin: 0px 0px 16px 0px;
-  font-size: 15px;
+#search_field {
+  /*input-block-level class from Bootstrap 2*/
+  display: block !important;
+  width: 100% !important;
+  min-height: 30px !important;
+  -webkit-box-sizing: border-box !important;
+     -moz-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  /*END input-block-level class from Bootstrap 2*/
+  /*override typeahead.js / form_for*/
+  border-color: #ccc !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  /*END override typeahead.js / form_for*/
+  margin: 0px 0px 0px 0px !important;
+  font-size: 15px !important;
+}
+
+/* search button */
+#search_button {
+  /*override typeahead.js / form_for */
+  background-color: #7459AF !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  /*END override typeahead.js / form_for */
 }
 
 /* END BOOTSTRAP OVERRIDES */

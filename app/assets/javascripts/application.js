@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require typeahead
 //= require_tree .
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag

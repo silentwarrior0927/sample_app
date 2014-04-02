@@ -26,7 +26,7 @@
 
 			<% else %>
 
-				<%= form_for(:session, url: sessions_path, :html => { :style => "float:right; margin:0; overflow:hidden; color:#ccc" } ) do |f| %>
+				<%= form_for(:session, url: '/signin', :html => { :style => "float:right; margin:0; overflow:hidden; color:#ccc" } ) do |f| %>
 					<table>
 						<tr>
 							<td><%= f.label :email %></td>
@@ -54,9 +54,9 @@
 <%= yield %>
 
 
-<div class="container">
+<!-- <div class="container">
   <%= debug(params) if Rails.env.development? %>
-</div>
+</div> -->
 
 </body>
 

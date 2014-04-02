@@ -1,16 +1,19 @@
 SampleApp::Application.routes.draw do
 
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :data_pages, only: [:search, :show]
-
+  # resources :sessions, only: [:new, :create, :destroy]
+  
   root 'static_pages#home'
   
   match '/help',  to: 'static_pages#help',  via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   
+  match '/signin', to: 'sessions#create', via: 'post'
   match '/signout', to: 'sessions#destroy', via: 'get'
   
   match '/search', to: 'data_pages#search', via: 'get'
+  match '/data_pages/debtor_suggestions.json', to: 'data_pages#debtor_suggestions', via: 'get'
+  match '/display_tables', to: 'data_pages#display_tables', via: 'post'
+
 
   #get 'static_pages/about'
   # The priority is based upon order of creation: first created -> highest priority.

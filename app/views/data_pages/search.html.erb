@@ -14,10 +14,15 @@
 
 	</div>
 
-	<form style="margin-bottom:35px; text-align:center">
+	<%= form_for(:sale, url: '/display_tables', :html => { :style => "margin-bottom:35px; text-align:center" } ) do |f| %>
+		<%= f.text_field :debtor_searchfield, class: "typeahead", id: "search_field", placeholder: "Enter the name of a debtor, such as &quot;Hostess&quot;.".html_safe %>
+		<%= f.submit "Search", id: "search_button", class: "btn btn-medium btn-primary" %>
+	<% end %>
+
+	<!-- <form style="margin-bottom:35px; text-align:center">
 		<input type="text" placeholder="Enter the name of a debtor, such as &quot;Hostess&quot;." class="input-block-level" id="search">
 		<button style="margin:0" type="submit" class="btn btn-medium btn-primary">Search</button>
-	</form>
+	</form> -->
 
 	<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 

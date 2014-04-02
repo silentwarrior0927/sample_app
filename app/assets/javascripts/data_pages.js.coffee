@@ -1,10 +1,10 @@
 # Place cursor in search bar (in /search)
 
-ready = ->
+#ready = ->
 	
-	document.getElementById("search").focus()
+#	document.getElementById("search").focus()
 
-	d3.select("body").transition().style "background-color", "white"
+#	d3.select("body").transition().style "background-color", "white"
 
-$(document).ready(ready)
-$(document).on('page:load', ready)
+#$(document).ready(ready)
+#$(document).on('page:load', ready)
