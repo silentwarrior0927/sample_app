@@ -8,6 +8,7 @@ class DataPagesController < ApplicationController
 	end
 
 	def display_tables
+		@query = params[:sale][:debtor_searchfield]
 		@results = Sale.search_by_debtor(params[:sale][:debtor_searchfield])
 	end
 

@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require typeahead
+//= require popover.min
 //= require_tree .
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag

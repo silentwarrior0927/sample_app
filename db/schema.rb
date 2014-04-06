@@ -43,30 +43,30 @@ ActiveRecord::Schema.define(version: 20140326014835) do
     t.date     "bidding_procedures_order_filed",             default: [], array: true
     t.date     "sale_order_filed",                           default: [], array: true
     t.date     "bankruptcy_case_closed",                     default: [], array: true
-    t.text     "comments_on_bankruptcy_filing_date",         default: [], array: true
-    t.text     "comments_on_debtor",                         default: [], array: true
-    t.text     "comments_on_chapter",                        default: [], array: true
-    t.text     "comments_on_assets",                         default: [], array: true
-    t.text     "comments_on_stalking_horse_parent",          default: [], array: true
-    t.text     "comments_on_stalking_horse",                 default: [], array: true
-    t.text     "comments_on_stalking_horse_bid_1",           default: [], array: true
-    t.text     "comments_on_stalking_horse_bid_text",        default: [], array: true
-    t.text     "comments_on_breakup_fee_1",                  default: [], array: true
-    t.text     "comments_on_breakup_fee_text",               default: [], array: true
-    t.text     "comments_on_required_overbid_1",             default: [], array: true
-    t.text     "comments_on_required_overbid_text",          default: [], array: true
-    t.text     "comments_on_bidder_list",                    default: [], array: true
-    t.text     "comments_on_winner_parent",                  default: [], array: true
-    t.text     "comments_on_winner",                         default: [], array: true
-    t.text     "comments_on_winning_bid_1",                  default: [], array: true
-    t.text     "comments_on_winning_bid_text",               default: [], array: true
-    t.text     "comments_on_judge",                          default: [], array: true
-    t.text     "comments_on_court",                          default: [], array: true
-    t.text     "comments_on_debtor_counsel",                 default: [], array: true
-    t.text     "comments_on_stalking_horse_counsel",         default: [], array: true
-    t.text     "comments_on_bidding_procedures_order_filed", default: [], array: true
-    t.text     "comments_on_sale_order_filed",               default: [], array: true
-    t.text     "comments_on_bankruptcy_case_closed",         default: [], array: true
+    t.text     "comments_on_bankruptcy_filing_date"
+    t.text     "comments_on_debtor"
+    t.text     "comments_on_chapter"
+    t.text     "comments_on_assets"
+    t.text     "comments_on_stalking_horse_parent"
+    t.text     "comments_on_stalking_horse"
+    t.text     "comments_on_stalking_horse_bid_1"
+    t.text     "comments_on_stalking_horse_bid_text"
+    t.text     "comments_on_breakup_fee_1"
+    t.text     "comments_on_breakup_fee_text"
+    t.text     "comments_on_required_overbid_1"
+    t.text     "comments_on_required_overbid_text"
+    t.text     "comments_on_bidder_list"
+    t.text     "comments_on_winner_parent"
+    t.text     "comments_on_winner"
+    t.text     "comments_on_winning_bid_1"
+    t.text     "comments_on_winning_bid_text"
+    t.text     "comments_on_judge"
+    t.text     "comments_on_court"
+    t.text     "comments_on_debtor_counsel"
+    t.text     "comments_on_stalking_horse_counsel"
+    t.text     "comments_on_bidding_procedures_order_filed"
+    t.text     "comments_on_sale_order_filed"
+    t.text     "comments_on_bankruptcy_case_closed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

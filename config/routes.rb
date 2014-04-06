@@ -13,7 +13,7 @@ SampleApp::Application.routes.draw do
   match '/search', to: 'data_pages#search', via: 'get'
   match '/data_pages/debtor_suggestions.json', to: 'data_pages#debtor_suggestions', via: 'get'
   match '/display_tables', to: 'data_pages#display_tables', via: 'post'
-
+  # match '/display_tables', to: 'data_pages#display_tables', via: 'get'
 
   #get 'static_pages/about'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -14,7 +14,7 @@
 
 	</div>
 
-	<%= form_for(:sale, url: '/display_tables', :html => { :style => "margin-bottom:35px; text-align:center" } ) do |f| %>
+	<%= form_for(:sale, url: '/display_tables', :html => { id: "search_form", :style => "margin-bottom:35px; text-align:center" } ) do |f| %>
 		<%= f.text_field :debtor_searchfield, class: "typeahead", id: "search_field", placeholder: "Enter the name of a debtor, such as &quot;Hostess&quot;.".html_safe %>
 		<%= f.submit "Search", id: "search_button", class: "btn btn-medium btn-primary" %>
 	<% end %>
