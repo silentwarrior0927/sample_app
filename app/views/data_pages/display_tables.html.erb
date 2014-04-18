@@ -43,8 +43,8 @@
 
 		<% results.each do |sale| %>
 
-			<div style="width:96%; margin:0px auto; background-color:#fff; border-top:6px solid #fff; border-bottom:6px solid #fff; text-align:center">
-				<div style="width:98%; margin: auto; padding-left:6px; background-color:#cc5314; color:#fff; text-align:left">
+			<div style="width:96%; margin:0px auto; background-color:#fff; border-top:6px solid #fff; border-bottom:6px solid #fff">
+				<div style="width:98%; margin:auto; padding-left:6px; background-color:#cc5314; color:#fff; text-align:left">
 					<% sale.assets.each_with_index do |assets, index| %>
 						<% if index > 0 %>
 							<%= "+ " %>
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			
-			<div class="subcontainer" style="width:96%; margin:6px auto 0px auto; text-align:center">
+			<div class="subcontainer-tables" style="width:96%; margin:6px auto 0px auto">
 				
 				<div style="height:100%; width:50%; float:left; background-color:#fff">
 					<table style="width:96%; margin:0px auto">
@@ -63,18 +63,18 @@
 						</tr>
 
 						<tr>
-							<td class="data_cells" style="width:33%; padding-top:10px">Parent of stalking horse:</td>
-							<td class="data_cells-right" style="width:62%; padding-top:10px"><%= sale.stalking_horse_parent[0] %></td>
+							<td class="data_cells data_cells-left" style="width:33%; padding-top:10px">Parent of stalking horse:</td>
+							<td class="data_cells data_cells-right" style="width:62%; padding-top:10px"><%= sale.stalking_horse_parent[0] %></td>
 							<td class="data_source" style="width:5%; padding-top:10px"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_stalking_horse_parent) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells">Stalking horse:</td>
-							<td class="data_cells-right"><%= sale.stalking_horse[0] %></td>
+							<td class="data_cells data_cells-left">Stalking horse:</td>
+							<td class="data_cells data_cells-right"><%= sale.stalking_horse[0] %></td>
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_stalking_horse) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells">Stalking horse bid:</td>
-							<td class="data_cells-right"><%= number_to_currency(sale.stalking_horse_bid_1[0], precision: 0) %></td>
+							<td class="data_cells data_cells-left">Stalking horse bid:</td>
+							<td class="data_cells data_cells-right"><%= number_to_currency(sale.stalking_horse_bid_1[0], precision: 0) %></td>
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_stalking_horse_bid_1) %></td>
 						</tr>
 						<tr>
@@ -87,8 +87,8 @@
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_stalking_horse_bid_text) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells" style="padding-bottom:10px">Counsel to stalking horse:</td>
-							<td class="data_cells-right" style="padding-bottom:10px"><%= sale.stalking_horse_counsel[0] %></td>
+							<td class="data_cells data_cells-left" style="padding-bottom:10px">Counsel to stalking horse:</td>
+							<td class="data_cells data_cells-right" style="padding-bottom:10px"><%= sale.stalking_horse_counsel[0] %></td>
 						</tr>
 					</table>
 				</div>
@@ -100,8 +100,8 @@
 						</tr>
 
 						<tr>
-							<td class="data_cells" style="width:33%; padding-top:10px">Breakup fee:</td>
-							<td class="data_cells-right" style="width:62%; padding-top:10px"><%= number_to_currency(sale.breakup_fee_1[0], precision: 0) %></td>
+							<td class="data_cells data_cells-left" style="width:33%; padding-top:10px">Breakup fee:</td>
+							<td class="data_cells data_cells-right" style="width:62%; padding-top:10px"><%= number_to_currency(sale.breakup_fee_1[0], precision: 0) %></td>
 							<td class="data_source" style="width:5%; padding-top:10px"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_breakup_fee_1) %></td>
 						</tr>
 						<tr>
@@ -114,8 +114,8 @@
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_breakup_fee_text) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells">Required overbid:</td>
-							<td class="data_cells-right"><%= number_to_currency(sale.required_overbid_1[0], precision: 0) %></td>
+							<td class="data_cells data_cells-left">Required overbid:</td>
+							<td class="data_cells data_cells-right"><%= number_to_currency(sale.required_overbid_1[0], precision: 0) %></td>
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_required_overbid_1) %></td>
 						</tr>
 						<tr>
@@ -128,15 +128,15 @@
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_required_overbid_text) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells" style="padding-bottom:10px">Bidding procedures order filing date:</td>
-							<td class="data_cells-right" style="padding-bottom:10px"><%= sale.bidding_procedures_order_filed[0] %></td>
+							<td class="data_cells data_cells-left" style="padding-bottom:10px">Bidding procedures order filing date:</td>
+							<td class="data_cells data_cells-right" style="padding-bottom:10px"><%= sale.bidding_procedures_order_filed[0] %></td>
 						</tr>
 					</table>
 				</div>
 			
 			</div>
 			
-			<div class="subcontainer" style="width:96%; margin:6px auto 38px auto; text-align:center">
+			<div class="subcontainer-tables" style="width:96%; margin:6px auto 38px auto">
 				
 				<div style="width:50%; float:left; background-color:#fff">
 					<table style="width:96%; margin:0px auto">
@@ -145,18 +145,18 @@
 						</tr>
 
 						<tr>
-							<td class="data_cells" style="width:33%; padding-top:10px">Parent of winner:</td>
-							<td class="data_cells-right" style="width:62%; padding-top:10px"><%= sale.winner_parent[0] %></td>
+							<td class="data_cells data_cells-left" style="width:33%; padding-top:10px">Parent of winner:</td>
+							<td class="data_cells data_cells-right" style="width:62%; padding-top:10px"><%= sale.winner_parent[0] %></td>
 							<td class="data_source" style="width:5%; padding-top:10px"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_winner_parent) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells">Winner:</td>
-							<td class="data_cells-right"><%= sale.winner[0] %></td>
+							<td class="data_cells data_cells-left">Winner:</td>
+							<td class="data_cells data_cells-right"><%= sale.winner[0] %></td>
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_winner) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells">Winning bid:</td>
-							<td class="data_cells-right"><%= number_to_currency(sale.winning_bid_1[0], precision: 0) %></td>
+							<td class="data_cells data_cells-left">Winning bid:</td>
+							<td class="data_cells data_cells-right"><%= number_to_currency(sale.winning_bid_1[0], precision: 0) %></td>
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_winning_bid_1) %></td>
 						</tr>
 						<tr>
@@ -169,8 +169,8 @@
 							<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_winning_bid_text) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells" style="padding-bottom:10px">Sale order filing date:</td>
-							<td class="data_cells-right" style="padding-bottom:10px"><%= sale.sale_order_filed[0] %></td>
+							<td class="data_cells data_cells-left" style="padding-bottom:10px">Sale order filing date:</td>
+							<td class="data_cells data_cells-right" style="padding-bottom:10px"><%= sale.sale_order_filed[0] %></td>
 						</tr>
 					</table>
 				</div>
@@ -182,8 +182,8 @@
 						</tr>
 
 						<tr>
-							<td class="data_cells" style="width:33%; padding-top:10px; vertical-align:top">Bidder list:</td>
-							<td class="data_cells-right" style="width:62%; padding-top:10px">
+							<td class="data_cells data_cells-left" style="width:33%; padding-top:10px">Bidder list:</td>
+							<td class="data_cells data_cells-right" style="width:62%; padding-top:10px">
 								<% if sale.bidder_list.length > 1 %>
 									<% sale.bidder_list.each do |bidder| %>
 										- <%= bidder %> <br>
@@ -197,8 +197,8 @@
 							<td class="data_source" style="width:5%; padding-top:10px"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_bidder_list) %></td>
 						</tr>
 						<tr>
-							<td class="data_cells" style="padding-bottom:10px">Debtor counsel:</td>
-							<td class="data_cells-right" style="padding-bottom:10px"><%= sale.debtor_counsel[0] %></td>
+							<td class="data_cells data_cells-left" style="padding-bottom:10px">Debtor counsel:</td>
+							<td class="data_cells data_cells-right" style="padding-bottom:10px"><%= sale.debtor_counsel[0] %></td>
 						</tr>
 					</table>
 				</div>

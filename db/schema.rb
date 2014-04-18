@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140326014835) do
+ActiveRecord::Schema.define(version: 20140408001820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,11 @@ ActiveRecord::Schema.define(version: 20140326014835) do
     t.text     "comments_on_bankruptcy_case_closed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "computation_breakup_fee_percentage_1"
+    t.decimal  "computation_breakup_fee_percentage_2"
+    t.decimal  "computation_required_overbid_percentage_1"
+    t.decimal  "computation_required_overbid_percentage_2"
+    t.integer  "computation_judge_code"
   end
 
   create_table "users", force: true do |t|

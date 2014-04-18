@@ -1,4 +1,4 @@
-bankruptcy_filing_date,debtor,chapter,assets,stalking_horse_parent,stalking_horse,stalking_horse_bid_1,stalking_horse_bid_text,breakup_fee_1,breakup_fee_2,breakup_fee_text,required_overbid_1,required_overbid_2,required_overbid_text,bidder_list,winner_parent,winner,winning_bid_1,winning_bid_text,judge,court,debtor_counsel,stalking_horse_counsel,bidding_procedures_order_filed,sale_order_filed,bankruptcy_case_closed,comments_on_bankruptcy_filing_date,comments_on_debtor,comments_on_chapter,comments_on_assets,comments_on_stalking_horse_parent,comments_on_stalking_horse,comments_on_stalking_horse_bid_1,comments_on_stalking_horse_bid_text,comments_on_breakup_fee_1,comments_on_breakup_fee_text,comments_on_required_overbid_1,comments_on_required_overbid_text,comments_on_bidder_list,comments_on_winner_parent,comments_on_winner,comments_on_winning_bid_1,comments_on_winning_bid_text,comments_on_judge,comments_on_court,comments_on_debtor_counsel,comments_on_stalking_horse_counsel,comments_on_bidding_procedures_order_filed,comments_on_sale_order_filed,comments_on_bankruptcy_case_closed
+bankruptcy_filing_date,debtor,chapter,assets,stalking_horse_parent,stalking_horse,stalking_horse_bid_1,stalking_horse_bid_text,breakup_fee_1,breakup_fee_2,breakup_fee_text,required_overbid_1,required_overbid_2,required_overbid_text,bidder_list,winner_parent,winner,winning_bid_1,winning_bid_text,judge,court,debtor_counsel,stalking_horse_counsel,bidding_procedures_order_filed,sale_order_filed,bankruptcy_case_closed,comments_on_bankruptcy_filing_date,comments_on_debtor,comments_on_chapter,comments_on_assets,comments_on_stalking_horse_parent,comments_on_stalking_horse,comments_on_stalking_horse_bid_1,comments_on_stalking_horse_bid_text,comments_on_breakup_fee_1,comments_on_breakup_fee_text,comments_on_required_overbid_1,comments_on_required_overbid_text,comments_on_bidder_list,comments_on_winner_parent,comments_on_winner,comments_on_winning_bid_1,comments_on_winning_bid_text,comments_on_judge,comments_on_court,comments_on_debtor_counsel,comments_on_stalking_horse_counsel,comments_on_bidding_procedures_order_filed,comments_on_sale_order_filed,comments_on_bankruptcy_case_closed,computation_breakup_fee_percentage_1,computation_breakup_fee_percentage_2,computation_required_overbid_percentage_1,computation_required_overbid_percentage_2,computation_judge_code
 2013-07-15,AgFeed USA LLC,11,"Farrowing and feed operations in Colorado, Oklahoma, and North Carolina; Finishing network in Iowa; Approximately 45% of the debtors' finishing herd",The Maschhoffs LLC,The Maschhoffs LLC,79000000,"Assumed liabilities; Various adjustments - see (D43, p123) for more details",2370000,790000,"Expense reimbursement up to $790,000",2620000,790000,"Expense reimbursement up to $790,000","TriOak Foods Inc, TriOak Foods Inc, and Smithfield Foods Inc; The Maschhoffs LLC","TriOak Foods Inc, TriOak Foods Inc, and Smithfield Foods Inc","High Plains Pork LLC, Cohoma Pork LLC, and Murphy Brown LLC",53191304,"Assumed liabilities; Various adjustments - see (D257, p57) for more details",Brendan Shannon,debke,Foley & Lardner; Young Conaway Stargatt & Taylor,Bryan Cave,2013-08-01,2013-08-29,,,,,"8-K, 8/30/2013",General information,"D43, p117
 Motion","D43, p123
 Motion","D43, p123
@@ -18,7 +18,7 @@ Sale hearing transcript","8-K, 8/30/2013
 Smithfield website","D257, p47
 Order","D257, p57
 Order","D257, p57
-Order",,,,,,,
+Order",,,,,,,,0.03,0.04,0.033164557,0.043164557,1
 2013-07-15,AgFeed USA LLC,11,Stock of AgFeed Industries Inc (British Virgin Islands),Ningbo Tech-Bank Company Ltd,Good Charm International Development Ltd,52880000,"Various adjustments - see (D331, p88) for more details",1586400,528800,"Expense reimbursement up to $528,800",1836400,528800,"Expense reimbursement up to $528,800",Ningbo Tech-Bank Company Ltd,Ningbo Tech-Bank Company Ltd,Good Charm International Development Ltd,52880000,"Various adjustments - see (D640, p37) for more details",Brendan Shannon,debke,Foley & Lardner; Young Conaway Stargatt & Taylor,Robbins Salomon & Patt; HHP Attorneys-at-Law,2013-10-10,2013-11-26,,,,,"D640, p1
 Order","D331, p83
 Motion","D331, p83
@@ -39,7 +39,7 @@ Order","D640, p32
 Order","D640, p32
 Order","D640, p37
 Order","D640, p37
-Order",,,,,,,
+Order",,,,,,,,0.03,0.04,0.034727685,0.044727685,1
 2011-09-07,Alexander Gallo Holdings LLC,11,Substantially all of the debtors' assets,HIG Capital LLC,Bayside Gallo Acquisition LLC,89409975,"Assumed liabilities of approximately $11.102mm; Various adjustments - see (D181, p17) for more details",3300000,1000000,Expense reimbursement up to $1m,4550000,1000000,Expense reimbursement up to $1m,HIG Capital LLC,HIG Capital LLC,Bayside Gallo Acquisition LLC,89409975,"Assumed liabilities of approximately $11.102mm; Various adjustments - see (D262, p49) for more details",Allan Gropper,nysbke,DLA Piper,Dechert,2011-10-06,2011-11-10,,,,,"D262, p1
 Order","Press release, Bayside, 12/6/2011","D181, p10
 Other","D181, p17
@@ -64,7 +64,7 @@ D216, p41/42
 Bidding procedures hearing transcript
 
 Includes first lien liabilities of approximately $48mm, second lien liabilities of approximately $23.2mm; DIP liabilities of approximately $8.1mm,  cure costs of approximately $3.945mm, professional fees of approximately $3.5mm, reimbursement for priority claim liabilities up to $1.434975mm, and wind-down expenses of $1.23mm","D262, p49
-Order",,,,,,,
+Order",,,,,,,,0.036908634,0.048093068,0.050889177,0.062073611,2
 2010-10-28,AmericanWest Bancorp,11,Substantially all of the debtor's assets,SKBHC Holdings LLC,SKBHC Hawks Nest Acquisition Corp,191500000,0,1000000,0,0,1500000,0,0,SKBHC Holdings LLC,SKBHC Holdings LLC,SKBHC Hawks Nest Acquisition Corp,191500000,0,Patricia Williams,waebke,Morrison & Foerster,Skadden Arps Slate Meagher & Flom,2010-11-18,2010-12-09,,,,,"Press release, 12/20/2010","D2 Exhibit A, p6
 Motion","D2 Exhibit A, p6
 Motion","D2 Exhibit A, p16
@@ -95,7 +95,7 @@ Includes equity contribution of $185mm","D153, p10
 Order
 
 D2 Exhibit A, p16
-Motion",,,,,,,
+Motion",,,,,,,,0.005221932,0.005221932,0.007832898,0.007832898,5
 2011-11-09,Blitz USA Inc,11,F3 Brands LLC business line,Scepter Corp,Scepter Holdings Inc,14500000,"Assumed liabilities; Various adjustments - see (D309, p30) for more details",438500,0,0,538500,0,0,Hopkins Manufacturing Corp; Scepter Corp,Hopkins Manufacturing Corp,Hopkins Manufacturing Corp,15463500,"Assumed liabilities; Various adjustments - see (D364, p54) for more details",Peter Walsh,debke,Richards Layton & Finger,Borden Ladner Gervais; Pepper Hamilton,2012-03-21,2012-03-29,,,,,"D372, p45
 Sale hearing transcript",General information,"D309, p12
 Other","D309, p30
@@ -111,7 +111,7 @@ Bidding procedures order","D372, p46
 Sale hearing transcript",General information,"D364, p36
 Order","D364, p54
 Order","D364, p45/54
-Order",,,,,,,
+Order",,,,,,,,0.030241379,0.030241379,0.037137931,0.037137931,4
 2011-11-09,Blitz USA Inc,11,Substantially all of the debtors' assets,Scepter Corp,Scepter Holdings Inc,9500000,Assumed liabilities,285000,0,0,385000,0,0,Scepter Corp,Scepter Corp,Scepter Holdings Inc,9500000,Assumed liabilities,Peter Walsh,debke,Richards Layton & Finger,Borden Ladner Gervais; Pepper Hamilton,2012-08-30,2012-09-11,,,,,"D758, p1
 Order",General information,"D695, p10
 Other","D695, p28
@@ -127,7 +127,7 @@ Bidding procedures order","D790, p4
 Sale hearing transcript",General information,"D758, p42
 Order","D758, p60
 Order","D758, p60
-Order",,,,,,,
+Order",,,,,,,,0.03,0.03,0.040526316,0.040526316,4
 2010-08-18,Boston Generating LLC,11,Substantially all of the debtors' assets,Constellation Energy Group Inc,Constellation Holdings Inc,1100000000,"Assumed liabilities; Various adjustments - see (D24 Exhibit E, p28) for more details",30000000,5000000,Expense reimbursement up to $5mm,45000000,"Various adjustments - see (D268 Attachment, p13) for more details","Various adjustments - see (D268 Attachment, p13) for more details",Constellation Energy Group Inc,Constellation Energy Group Inc,Constellation Holdings Inc,1100000000,"Assumed liabilities; Various adjustments - see (D496 Exhibit 1 Part 1, p28) for more details",Shelley Chapman,nysbke,Latham & Watkins,Winston & Strawn,2010-10-12,2010-11-24,,,,,"D494, p1
 Order",General information,"D24 Exhibit E, p6
 Motion","D24 Exhibit E, p28
@@ -146,7 +146,7 @@ Bidding procedures order","D494, p2
 Order",General information,"D496 Exhibit 1 Part 1, p6
 Other","D496 Exhibit 1 Part 1, p28
 Other","D496 Exhibit 1 Part 1, p28
-Other",,,,,,,
+Other",,,,,,,,0.027272727,0.031818182,0.040909091,0.040909091,6
 2009-07-09,Cabrini Medical Center,11,Debtor's real property and related assets,JD Carlisle Development Corp,Cabre Partners LLC,80000000,"Various adjustments - see (D224, p38) for more details",3000000,0,0,3000000,0,0,Memorial Sloan Kettering Cancer Center; JD Carlisle Development Corp; Potentially others,Memorial Sloan Kettering Cancer Center,SKI Realty Inc,83100000,"Various adjustments - see (D292, p25) for more details",Allan Gropper,nysbke,Garfunkel Wild; Togut Segal & Segal,Proskauer Rose,2009-12-30,2010-02-11,2013-09-30,,,,"D292, p1
 Order","D224, p31
 Bidding procedures order","D224, p31
@@ -161,9 +161,11 @@ Order","D292, p18
 Order","D292, p18
 Order","D292, p25
 Order","D292, p25
-Order",,,,,,,
+Order",,,,,,,,0.0375,0.0375,0.0375,0.0375,2
 2009-07-09,Cabrini Medical Center,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Allan Gropper,nysbke,,,,2009-10-22,2013-09-30,,,,"D144, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Order",,,,,,,,,,,,,,,,,,,,,,,,,2
+2010-08-12,Caribbean Petroleum Corp,11,Certain storage tanks and related equipment,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Kevin Gross,debke,,,,2011-05-11,,,,,"D992, p1
+Order",,,,,,,,,,,,,,,,,,,,,,,,,3
 2010-08-12,Caribbean Petroleum Corp,11,Substantially all of the debtors' assets,,No stalking horse,,,,,,,,,Puma Energy International BV; Allied Aviation LLC; Astra Energy LLC; Peerless Energy Systems LLC; Others,Puma Energy International BV,Puma Energy International BV,82000000,"Assumed liabilities; Various adjustments - see (D511 Exhibit Part 1, p21) for more details",Kevin Gross,debke,,,,2010-12-22,,,,,"D511, p1
 Order","D511, p4
 Order","D511, p4
@@ -179,9 +181,7 @@ Order","D511 Exhibit Part 1, p17/21
 Order","D511 Exhibit Part 1, p21
 Order",,,,"D511, p4
 Order","D511, p4
-Order",,
-2010-08-12,Caribbean Petroleum Corp,11,Certain storage tanks and related equipment,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Kevin Gross,debke,,,,2011-05-11,,,,,"D992, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Order",,,,,,,3
 2013-05-01,Coda Holdings Inc; Coda Automotive Inc,11,Substantially all of the debtors' non-automotive assets,Fortress Investment Group LLC,FCO MA Holdings LLC,25000000,"Assumed liabilities; Various adjustments - see (D11, p83) for more details",0,0,0,250000,375000,"Investment banker success fee of $375,000",Fortress Investment Group LLC,Fortress Investment Group LLC,FCO MA Coda Holdings LLC,25000000,"Assumed liabilities; Various adjustments - see (D299, p53) for more details",Christopher Sontchi,debke,White & Case,Sidley Austin,2013-05-29,2013-06-11,,,,,"D252, p1
 Order","Press release, 5/1/2013","D11, p66
 Motion","D11, p83
@@ -201,7 +201,7 @@ Other","D299, p53
 Other
 
 Includes credit bid of $23.3mm","D299, p53
-Other",,,,,,,
+Other",,,,,,,,0,0,0.01,0.025,0
 2013-12-19,Constar International Holdings LLC,11,Certain US assets,Amcor Ltd,Amcor Rigid Plastics USA Inc,68500000,"Assumed liabilities; Various adjustments - see (D12, p129) for more details",2055000,1200000,Expense reimbursement up to $1.2mm,3605000,0,0,Plastipak Packaging Inc; Amcor Ltd; Envases Universales de Mexico SAPI de CV,Plastipak Packaging Inc,Plastipak Packaging Inc,102450000,"Assumed liabilities; Various adjustments - see (D326, p30) for more details",Christopher Sontchi,debke,Dechert,Foley & Lardner; Davies Ward Phillips & Vineberg,2014-01-10,2014-02-10,,,,,"Press release, Plastipak, 2/10/2014",General information,"D12, p108
 Motion","D12, p129
 Motion","D12, p129
@@ -222,26 +222,7 @@ Other","D350, p15
 Order
 
 D326, p30
-Other",,,,,,,
-2013-12-19,Constar International Holdings LLC,11,Substantially all of the assets of Constar UK,,No stalking horse,,,,,,,,,Greybull Capital LLP; Amcor Ltd; OpenGate Capital LLC,Greybull Capital LLP,Sherburn Acquisition Ltd,7046000,Assumed liabilities,Christopher Sontchi,debke,,,,2014-02-11,,,,,"D357, p2/14
-Order","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p8
-Other","D342, p9
-Other","D357, p35
-Order","D357, p41
-Order
-
-GBP3.532mm","D357, p36
-Order",,,,"D342, p8
-Other","D342, p8
-Other",,
+Other",,,,,,,,0.03,0.047518248,0.052627737,0.052627737,0
 2013-12-19,Constar International Holdings LLC,11,Certain real property,The JM Smucker Company,The JM Smucker Company,2990000,"Various adjustments - see (D241, p72) for more details",74750,0,0,124750,0,0,The JM Smucker Company,The JM Smucker Company,The JM Smucker Company,2990000,"Various adjustments - see (D241, p72) for more details",Christopher Sontchi,debke,Dilworth Paxson,Walter Haverfield,2014-01-30,2014-02-11,,,,,"D354, p1
 Order",General information,"D241, p72
 Motion","D241, p93
@@ -266,7 +247,26 @@ Motion","D354, p12
 Order
 
 D241, p72
-Motion",,,,,,,
+Motion",,,,,,,,0.025,0.025,0.041722408,0.041722408,0
+2013-12-19,Constar International Holdings LLC,11,Substantially all of the assets of Constar UK,,No stalking horse,,,,,,,,,Greybull Capital LLP; Amcor Ltd; OpenGate Capital LLC,Greybull Capital LLP,Sherburn Acquisition Ltd,7046000,Assumed liabilities,Christopher Sontchi,debke,,,,2014-02-11,,,,,"D357, p2/14
+Order","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p8
+Other","D342, p9
+Other","D357, p35
+Order","D357, p41
+Order
+
+GBP3.532mm","D357, p36
+Order",,,,"D342, p8
+Other","D342, p8
+Other",,,,,,,0
 2012-10-29,First Place Financial Corp,7,Substantially all of the debtors' assets,Talmer Bancorp Inc,Talmer Bancorp Inc,250000000,Assumed liabilities,3000000,1000000,Expense reimbursement up to $1m,4000000,0,0,Talmer Bancorp Inc,Talmer Bancorp Inc,Talmer Bancorp Inc,265000000,Subtract $5mm from the consideration if Talmer cannot take on $15mm of debt; Assumed liabilities,Brendan Shannon,debke,Patton Boggs,Nelson Mullins Riley & Scarborough,2012-11-28,2012-12-14,,,,,"Press release, Talmer, 1/2/2013",General information,"D9 Exhibit A Part 1, p6
 Motion","D9 Exhibit A Part 1, p10/17
 Motion
@@ -282,7 +282,7 @@ Order","D157 Exhibit A Part 1, p10/17
 Order
 
 Includes equity contribution of approximately $205mm","D157 Exhibit A Part 1, p7/17
-Order",,,,,,,
+Order",,,,,,,,0.012,0.016,0.016,0.016,1
 2013-11-22,Fisker Automotive Holdings Inc,11,Substantially all of the debtors' assets,Wanxiang Group Corp,Wanxiang America Corp,44390000,20% equity interest in new Fisker; Assumed liabilities,0,750000,"Expense reimbursement up to $750,000",1600000,0,0,Wanxiang Group Corp; Richard Li,Wanxiang Group Corp,Wanxiang America Corp,126200000,"20% common equity interest in new Fisker; Assumed liabilities; Various adjustments - see (D653, p103) for more details",Kevin Gross,debke,Kirkland & Ellis,Sidley Austin,2014-01-23,2014-02-19,,,,,"Press release, 2/18/2014","General information
 
 News (http://online.wsj.com/news/articles/SB10001424052702304049704579318941385377648)
@@ -310,7 +310,7 @@ Order","D653, p103
 Order
 
 Includes DIP liabilities up to $9.14mm","D653, p103
-Order",,,,Stalking horse 2: Keller & Benvenutti,,,
+Order",,,,Stalking horse 2: Keller & Benvenutti,,,,0,0.016895697,0.036044154,0.036044154,3
 2008-02-04,Fortunoff Fine Jewelry and Silverware LLC,11,Substantially all of the debtors' assets,NRDC Equity Partners LLC,H Acquisition LLC,80000000,"DIP liabilities; Assumed liabilities; Various adjustments - see (D22, p57) for more details",2250000,1000000,Expense reimbursement up to $1m,2250000,1000000,Expense reimbursement up to $1m,NRDC Equity Partners LLC; Group of liquidators,NRDC Equity Partners LLC,H Acquisition LLC,80000000,"DIP liabilities; Assumed liabilities; Various adjustments - see (D328 Exhibit A, p10) for more details",James Peck,nysbke,Skadden Arps Slate Meagher & Flom,Sidley Austin,2008-02-22,2008-03-06,2009-02-08,,,,"Press release, 2/4/2013","D328 Exhibit A, p67
 Order","D22, p53
 Motion","D22, p57
@@ -327,7 +327,7 @@ Sale hearing transcript","D328 Exhibit A, p67
 Order","D328 Exhibit A, p6
 Order","D328 Exhibit A, p10
 Order","D328 Exhibit A, p10/63
-Order",,,,,Another bidding procedures order was signed on 2/15/2008.,,
+Order",,,,,Another bidding procedures order was signed on 2/15/2008.,,,0.028125,0.040625,0.028125,0.040625,7
 2012-10-19,HMX Acquisition Corp,11,Substantially all of the debtors' assets,Authentic Brands Group LLC,Authentic Brands Group LLC,72300000,"Add $4mm to the cash consideration if the relevant license agreement is not executed pursuant to the relevant terms (D21, p53); Assumed liabilities",2200000,425000,"Expense reimbursement up to $425,000",2200000,425000,"Expense reimbursement up to $425,000",Authentic Brands Group LLC,Authentic Brands Group LLC,Authentic Brands Group LLC,72300000,Assumed liabilities,Allan Gropper,nysbke,Proskauer Rose,DLA Piper,2012-11-29,2012-12-20,,,,,"D270, p1
 Order",General information,"D21, p42
 Motion","D21, p53
@@ -350,7 +350,7 @@ Order","D270 Exhibit A, p97
 Order
 
 Includes pre- and postpetition claims by Salus Capital Partners LLC of approximately $67.2mm","D270 Exhibit A, p97
-Order",,,,,,,
+Order",,,,,,,,0.030428769,0.036307054,0.030428769,0.036307054,2
 2012-10-19,HMX Acquisition Corp,11,Certain trademarks associated with the debtors' Canadian affiliate,,Private sale,,,,,,,,,,The Tom James Company,Very Best Apparel Corp,500000,0,Allan Gropper,nysbke,,,,2012-11-16,,,,,"D142, p1
 Order","D142, p6
 Order
@@ -408,7 +408,7 @@ Motion","D142, p6
 Order
 
 D88, p1
-Motion",,
+Motion",,,,,,,2
 2012-12-11,LCI Holding Company Inc; LifeCare Hospitals LLC,11,Substantially all of the debtors' assets,The debtors' senior secured lenders,Hospital Acquisition LLC,348750000,Certain professional fees; Assumed liabilities,0,750000,"Expense reimbursement up to $750,000",3000000,750000,"Expense reimbursement up to $750,000",The debtors' senior secured lenders,The debtors' senior secured lenders,Hospital Acquisition LLC,348750000,Certain professional fees; Assumed liabilities,Kevin Gross,debke,Skadden Arps Slate Meagher & Flom,Akin Gump Strauss Hauer & Feld,2013-01-25,2013-04-04,,,,,"D617, p1
 Order","Press release, 3/18/2013","D23, p103
 Motion","D23, p108/124/125
@@ -428,7 +428,7 @@ Order","D617, p49/65/66; D291, p10
 Order
 
 Includes credit bid of $320mm, DIP liabilities up to $25mm, and wind-down expense reimbursement up to $3.75mm","D617, p65
-Order",,,,,,,
+Order",,,,,,,,0,0.002150538,0.008602151,0.010752688,3
 2008-03-10,Leiner Health Products Inc,11,Substantially all of the debtors' assets,NBTY Inc,NBTY Acquisition LLC,230000000,"Assumed liabilities; Various adjustments - see (D358 Exhibit A Part 1, p17) for more details",5750000,1150000,Expense reimbursement up to $1.15mm,7150000,0,0,NBTY Inc; Potentially others,NBTY Inc,NBTY Acquisition LLC,385000000,"Assumed liabilities; Various adjustments - see (D430 Exhibit A Part 1, p17) for more details",Kevin Carey,debke,Kirkland & Ellis,Farrell Fritz,2008-05-30,2008-06-11,2013-06-18,,,,"D430, p1
 Order","D358 Exhibit A Part 1, p8
 Bidding procedures order","D358 p2; D358 Exhibit A Part 1, p8
@@ -443,7 +443,7 @@ Order","D430 Exhibit A Part 1, p8
 Order","D430 Exhibit A Part 1, p8
 Order","D430 Exhibit A Part 1, p17
 Order","D430 Exhibit A Part 1, p17
-Order",,,,,,,
+Order",,,,,,,,0.025,0.03,0.031086957,0.031086957,8
 2008-03-10,Leiner Health Products Inc,11,"2005 1-Fette 61 double-sided rotary tablet press, model P3200",,Private sale,,,,,,,,,,Leiner Health Products Inc,Vita Health Products Inc,463956,0,Kevin Carey,debke,,,,2008-05-19,2013-06-18,,,,"D313, p2
 Order
 
@@ -496,9 +496,9 @@ Motion","D313, p2
 Order
 
 D251, p5
-Motion",,
+Motion",,,,,,,8
 2008-03-10,Leiner Health Products Inc,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Kevin Carey,debke,,,,2008-04-07,2013-06-18,,,,"D179, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Order",,,,,,,,,,,,,,,,,,,,,,,,,8
 2010-04-21,Magic Brands LLC; Fuddruckers Inc,11,Substantially all of the debtors' assets,Tavistock Group Inc,Tavistock Ventures Inc,40139400,"Subtract $9mm from the consideration if the court does not approve the assumption and assignment to Tavistock of the relevant stores pursuant to the relevant terms (D21, p66); Assumed liabilities; Various adjustments - see (D21, p81) for more details",400000,0,0,1000000,0,0,Luby's Inc; Tavistock Group Inc; FMR LLC,Luby's Inc,Luby's Inc,63591400,"Subtract $2.45mm from the consideration if Luby's must assume the ""Pepsi Contract"" (D453, p33); Assumed liabilities; Various adjustments - see (D453, p48) for more details",Brendan Shannon,debke,Goulston & Storrs,DLA Piper,2010-05-18,2010-06-24,,,,,"Press release, 6/23/2010","Press release, 4/21/2010","D21, p65
 Motion","D21, p66/81/157
 Motion","D21, p66/72/81
@@ -510,9 +510,9 @@ Bidding procedures order","D436, p3
 Auction transcript",General information,"D453, p32
 Order","D453, p33/48/99
 Order","D453, p33/39/48
-Order",,,,,,,
+Order",,,,,,,,0.009965271,0.009965271,0.024913178,0.024913178,1
 2010-04-21,Magic Brands LLC; Fuddruckers Inc,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Brendan Shannon,debke,,,,2010-05-17,,,,,"D259, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Order",,,,,,,,,,,,,,,,,,,,,,,,,1
 2013-09-06,MSD Performance Inc,11,Substantially all of the debtors' assets,,No stalking horse,,,,,,,,,Z Capital Partners LLC,Z Capital Partners LLC,Z Capital Special Situations Fund II LP,78626612,Certain professional fees; Assumed liabilities,Peter Walsh,debke,,,,2013-11-26,,,,,"D265, p1
 Order","D237, no mention
 Other","D237, no mention
@@ -530,7 +530,7 @@ Order
 Includes credit bid of $78mm and wind-down expense reimbursement up to $626,612","D265 Exhibit A Part 1, p10/31
 Order",,,,"D237, no mention
 Other","D237, no mention
-Other",,
+Other",,,,,,,4
 2013-12-02,OCZ Technology Group Inc,11,Substantially all of the debtors' assets,Toshiba Corp,Toshiba Corp,35000000,"Assumed liabilities; Various adjustments - see (D15, p151) for more details",700000,500000,"Expense reimbursement up to $500,000",1300000,0,0,Toshiba Corp,Toshiba Corp,Toshiba Corp,35000000,"Assumed liabilities; Various adjustments - see (D241, p64) for more details",Peter Walsh,debke,Mayer Brown,Latham & Watkins,2013-12-23,2014-01-06,,,,,"D241, p1
 Order",General information,"D15, p127
 Motion","D15, p129/151
@@ -543,7 +543,7 @@ Bidding procedures order","D241, p2
 Order",General information,"D241, p40
 Order","D241, p42/64
 Order","D241, p64
-Order",,,,,,,
+Order",,,,,,,,0.02,0.034285714,0.037142857,0.037142857,4
 2013-12-02,OCZ Technology Group Inc,11,Power supply assets,,No stalking horse,,,,,,,,,Firepower Technology Inc; Douglas A. Dodson; Potentially others,Firepower Technology Inc,Firepower Technology Inc,850000,"Assumed liabilities; Various adjustments - see (D294, p25) for more details",Peter Walsh,debke,,,,2014-02-06,,,,,"D294, p1
 Order","D259, no mention
 Bidding procedures order","D259, no mention
@@ -559,7 +559,7 @@ Order","D294, p25
 Order","D294, p25/46
 Order",,,,"D259, no mention
 Bidding procedures order","D259, no mention
-Bidding procedures order",,
+Bidding procedures order",,,,,,,4
 2013-08-19,Personal Communications Devices LLC,11,Substantially all of the debtors' assets,Quality One Wireless LLC,Q1W Newco LLC,108590067,"Assumed liabilities; Various adjustments - see (D10 Exhibit A, p45) for more details",3500000,1000000,Expense reimbursement up to $1m,4550000,0,0,Quality One Wireless LLC,Quality One Wireless LLC,Q1W Newco LLC,111840067,"Assumed liabilities; Various adjustments - see (D207 Exhibit A, p23) for more details",Alan Trust,nyebke,Goodwin Proctor,Munsch Hardt Kopf & Harr,2013-09-16,2013-10-17,,,,,"D207, p1
 Order","D10 Exhibit A, p29
 Motion","D10 Exhibit A, p29
@@ -578,7 +578,7 @@ Order","D207, p10/12/16; D207 Exhibit A, p9/15/22/48
 Order
 
 This value is an approximation. We must use (D207 Exhibit A, p22) to compute this figure.","D207 Exhibit A, p22/23
-Order",,,,,,,
+Order",,,,,,,,0.032231309,0.041440254,0.041900702,0.041900702,9
 2013-10-14,Savient Parmaceuticals Inc,11,Substantially all of the debtors' assets,US WorldMeds LLC,Sloan Holdings CV,54990000,"Assumed liabilities; Various adjustments - see (D17, p110) for more details",1650000,750000,"Expense reimbursement up to $750,000",1850000,750000,"Expense reimbursement up to $750,000",Crealta Pharmaceuticals LLC; US WorldMeds LLC; Potentially others,GTCR LLC and Ed Fiorentino,Crealta Pharmaceuticals LLC,120425896,"Assumed liabilities; Various adjustments - see (D251, p39) for more details",Mary Walrath,debke,Skadden Arps Slate Meagher & Flom,Frost Brown Todd,2013-11-04,2013-12-13,,,,,"D251, p3
 Order","D17, p105
 Motion","D17, p105
@@ -598,9 +598,9 @@ Bidding procedures order","D251, no mention
 Order","Press release, Crealta, 8/6/2013","D251, p34
 Order","D251, p39
 Order","D251, p39
-Order",,,,,,,
+Order",,,,,,,,0.030005456,0.043644299,0.03364248,0.047281324,10
 2013-10-14,Savient Parmaceuticals Inc,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Mary Walrath,debke,,,,2014-01-14,,,,,"D332, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Order",,,,,,,,,,,,,,,,,,,,,,,,,10
 2010-02-03,Spheris Inc,11,Substantially all of the debtors' assets,CBay Inc and MedQuist Inc,CBay Inc and MedQuist Inc,75249601.9,"Assumed liabilities; Various adjustments - see (D14 Exhibit A, p22) for more details",2100000,375000,"Expense reimbursement up to $375,000",3000000,0,0,CBay Inc and MedQuist Inc; Transcend Services Inc,CBay Inc and MedQuist Inc,CBay Inc and MedQuist Inc,116333901,"Assumed liabilities; Various adjustments - see (D317 Exhibit 1, p22) for more details",Kevin Gross,debke,Willkie Farr & Gallagher,Wachtell Lipton Rosen & Katz,2010-02-23,2010-04-15,2011-12-20,,,,"Press release, MedQuist, 4/15/2010",General information,"D14 Exhibit A, p5
 Motion","D14 Exhibit A, p22
 Motion","D14 Exhibit A, p6/22
@@ -618,7 +618,7 @@ Bidding procedures order","D329, p8
 Sale hearing transcript",General information,"D317 Exhibit 1, p5
 Other","D317 Exhibit 1, p22
 Other","D317 Exhibit 1, p6/22
-Other",,,,,,,
+Other",,,,,,,,0.027907124,0.032890539,0.039867321,0.039867321,3
 2009-11-18,Taylor-Wharton International LLC,11,Cylinders business,TriMas Corp,Norris Cylinder Company,11000000,"Assumed liabilities; Various adjustments - see (D295, p50) for more details",352000,0,0,1102000,0,0,TriMas Corp,TriMas Corp,Norris Cylinder Company,11000000,"Assumed liabilities; Various adjustments - see (D295, p50) for more details",Brendan Shannon,debke,McNees Wallace & Nurick,Honigman Miller Schwartz & Cohn,2010-05-12,2010-06-09,,,,,"D384, p1
 Order","Press release, TriMas, 6/10/2010","D295, p34
 Motion","D295, p50
@@ -648,12 +648,12 @@ Motion","D384, p11
 Order
 
 D295, p50
-Motion",,,,,,,
+Motion",,,,,,,,0.032,0.032,0.100181818,0.100181818,1
 2009-11-18,Taylor-Wharton International LLC,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Brendan Shannon,debke,,,,2010-06-09,,,,,"D385, p2
 Order
 
 D336, p4
-Motion",,,,,,,,,,,,,,,,,,,,
+Motion",,,,,,,,,,,,,,,,,,,,,,,,,1
 2012-01-04,Trident Microsystems Inc,11,Certain of the debtors' assets related to their set top box business,Entropic Communications Inc,Entropic Communications Inc,55000000,"Assumed liabilities; Various adjustments - see (D14, p60) for more details",1650000,1350000,Expense reimbursement up to $1.35mm,2250000,1350000,Expense reimbursement up to $1.35mm,Entropic Communications Inc; Potentially others,Entropic Communications Inc,Entropic Communications Inc,65000000,"Assumed liabilities; Various adjustments - see (D319, p125) for more details",Christopher Sontchi,debke,DLA Piper,Cooley,2012-02-07,2012-03-09,,,,,"D319, p1
 Order",General information,"D14, p53
 Motion","D14, p60
@@ -672,7 +672,7 @@ Bidding procedures order","D319, no mention
 Order",General information,"D319, p31
 Order","D319, p125
 Order","D319, p125
-Order",,,,,,,
+Order",,,,,,,,0.03,0.054545455,0.040909091,0.065454545,0
 2012-01-04,Trident Microsystems Inc,11,Certain of the debtors' assets related to their TV business,Sigma Designs Inc,Sigma Designs Inc,22460000,"Assumed liabilities; Various adjustments - see (D384, p38) for more details",800000,350000,"Expense reimbursement up to $350,000",1100000,350000,"Expense reimbursement up to $350,000",Sigma Designs Inc; Potentially others,Sigma Designs Inc,Sigma Designs Inc,22460000,"Assumed liabilities; Various adjustments - see (D443, p28) for more details",Christopher Sontchi,debke,DLA Piper,Pillsbury Winthrop Shaw Pittman,2012-03-23,2012-04-05,,,,,"D443, p1
 Order",General information,"D384, p30
 Bidding procedures order","D384, p38
@@ -691,7 +691,56 @@ Bidding procedures order","D443, no mention
 Order",General information,"D443, p20
 Order","D443, p28
 Order","D443, p28
-Order",,,,,,,
+Order",,,,,,,,0.035618878,0.051202137,0.048975957,0.064559216,0
+2012-01-04,Trident Microsystems Inc,11,Certain of the debtors' assets related to their audio business,,Private sale,,,,,,,,,,Cambridge Silicon Radio Ltd,Cambridge Silicon Radio Ltd,900000,Assumed liabilities,Christopher Sontchi,debke,,,,2012-05-16,,,,,"D598, p1
+Order","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion",General information,"D598, p20
+Order","D598, p27
+Order","D598, p27
+Order",,,,"D598, p4
+Order
+
+D546, p9
+Motion","D598, p4
+Order
+
+D546, p9
+Motion",,,,,,,0
 2012-01-04,Trident Microsystems Inc,11,Certain of the debtors' assets related to their demod business,,Private sale,,,,,,,,,,Sigma Designs Inc,Sigma Designs Technology Netherlands BV,1350000,"Assumed liabilities; Various adjustments - see (D766, p21) for more details",Christopher Sontchi,debke,,,,2012-07-10,,,,,"D766, p1
 Order","D766, p4
 Order
@@ -742,56 +791,7 @@ Motion","D766, p4
 Order
 
 D695, p8
-Motion",,
-2012-01-04,Trident Microsystems Inc,11,Certain of the debtors' assets related to their audio business,,Private sale,,,,,,,,,,Cambridge Silicon Radio Ltd,Cambridge Silicon Radio Ltd,900000,Assumed liabilities,Christopher Sontchi,debke,,,,2012-05-16,,,,,"D598, p1
-Order","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion",General information,"D598, p20
-Order","D598, p27
-Order","D598, p27
-Order",,,,"D598, p4
-Order
-
-D546, p9
-Motion","D598, p4
-Order
-
-D546, p9
-Motion",,
+Motion",,,,,,,0
 2012-10-10,Vertis Holdings Inc,11,Substantially all of the debtors' assets,Quad/Graphics Inc,Quad/Graphics Marketing LLC,258500000,"Assumed liabilities; Various adjustments - see (D16, p81) for more details",8000000,2500000,Expense reimbursement up to $2.5mm,15500000,0,0,Quad/Graphics Inc,Quad/Graphics Inc,Quad/Graphics Marketing LLC,285500000,"Assumed liabilities; Various adjustments - see (D425 Exhibit Part 1, p31) for more details",Christopher Sontchi,debke,Cadwalader Wickersham & Taft,Arnold & Porter,2012-11-02,2012-12-06,,,,,"D425, p1
 Order","D16, p57
 Motion","D16, p57
@@ -809,56 +809,7 @@ Motion","D425 Exhibit Part 1, p7
 Order","D425 Exhibit Part 1, p7
 Order","D425 Exhibit Part 1, p20/31
 Order","D425 Exhibit Part 1, p31
-Order",,,,,,,
-2012-10-10,Vertis Holdings Inc,11,"Real property located in York, Pennsylvania",,Private sale,,,,,,,,,,Gordon York LP,Gordon York LP,1950000,"Various adjustments - see (D1278, p8) for more details",Christopher Sontchi,debke,,,,2013-07-31,,,,,"D1278, p1
-Order","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion",General information,"D1278, p7
-Order","D1278, p8
-Order","D1278, p8
-Order",,,,"D1278, p2
-Order
-
-D1218, p12
-Motion","D1278, p2
-Order
-
-D1218, p12
-Motion",,
+Order",,,,,,,,0.030947776,0.040618956,0.059961315,0.059961315,0
 2012-10-10,Vertis Holdings Inc,11,Stevensville assets,Ferguson-Neudorf Glass Inc,2030247 Ontario Inc,1250000,0,0,12500,"Expense reimbursement up to $12,500",50000,12500,"Expense reimbursement up to $12,500",Ferguson-Neudorf Glass Inc; Potentially others,Ferguson-Neudorf Glass Inc,2030247 Ontario Inc.,1250000,0,Christopher Sontchi,debke,Richards Layton & Finger,Lancaster Brooks & Welch,2014-01-02,2014-02-14,,,,,"D1678, p1
 Order","D1544, p93
 Motion
@@ -889,7 +840,9 @@ Motion","D1678, p7
 Order
 
 D1544, p70
-Motion",,,,,,,
+Motion",,,,,,,,0,0.01,0.04,0.05,0
+2012-10-10,Vertis Holdings Inc,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Christopher Sontchi,debke,,,,2013-02-15,,,,,"D738, p1
+Order",,,,,,,,,,,,,,,,,,,,,,,,,0
 2012-10-10,Vertis Holdings Inc,11,"Real property and furniture and equipment located in Medina, Ohio",,Private sale,,,,,,,,,,James C. Gowe,Smith Road Enterprises LLC,200000,0,Christopher Sontchi,debke,,,,2014-02-10,,,,,"D1664, p1
 Order","D1664, p5
 Order
@@ -947,7 +900,7 @@ Other","D1664, p5
 Order
 
 D1662, p3
-Other",,
+Other",,,,,,,0
 2012-10-10,Vertis Holdings Inc,11,"Real property lease, perpetual easement, and non-exclusive, perpetual right-of-way relating to real property located in Saugerties, New York",,Private sale,,,,,,,,,,Global Signal Inc,Global Signal Acquisitions IV LLC,200000,0,Christopher Sontchi,debke,,,,2013-09-04,,,,,"D1354, p2
 Order","D1354, p5
 Order
@@ -996,9 +949,56 @@ Other","D1354, p5
 Order
 
 D1349, p3
-Other",,
-2012-10-10,Vertis Holdings Inc,11,De minimis assets,,"For additional information on this sale, please contact 363Live at x@363live.com.",,,,,,,,,,,,,,Christopher Sontchi,debke,,,,2013-02-15,,,,,"D738, p1
-Order",,,,,,,,,,,,,,,,,,,,
+Other",,,,,,,0
+2012-10-10,Vertis Holdings Inc,11,"Real property located in York, Pennsylvania",,Private sale,,,,,,,,,,Gordon York LP,Gordon York LP,1950000,"Various adjustments - see (D1278, p8) for more details",Christopher Sontchi,debke,,,,2013-07-31,,,,,"D1278, p1
+Order","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion",General information,"D1278, p7
+Order","D1278, p8
+Order","D1278, p8
+Order",,,,"D1278, p2
+Order
+
+D1218, p12
+Motion","D1278, p2
+Order
+
+D1218, p12
+Motion",,,,,,,0
 2010-11-17,Vitro America Inc,11,Substantially all of the debtors' assets,Grey Mountain Partners LLC,Vitro America Acquisition Corp,44000000,"Assumed liabilities; Various adjustments - see (Amended and restated asset purchase agreement, 5/12/2011, p30) for more details",836000,1000000,Expense reimbursement up to $1m,1086000,1000000,Expense reimbursement up to $1m,Sun Capital Partners Inc; Grey Mountain Partners LLC; One other bidder,Sun Capital Partners Inc,American Glass Enterprises LLC,55086000,"Assumed liabilities; Various adjustments - see (D775, p32) for more details",Harlin Hale,txnbke,Fulbright & Jaworski,Skadden Arps Slate Meagher & Flom,2011-05-10,2011-06-13,2011-04-15,,,,"Press release, Vitro SA de CV, 6/17/2011",News (http://www.law360.com/articles/243468/vitro-parent-plotting-to-buy-back-co-creditors-say),"Amended and restated asset purchase agreement, 5/12/2011, p8
 Other
 
@@ -1027,7 +1027,7 @@ Other","D866, p14
 Order
 
 D775, p11/32
-Other",,,,,,,
+Other",,,,,,,,0.019,0.041727273,0.024681818,0.047409091,11
 2010-11-17,Vitro America Inc,11,"2 cranes and 2 concrete tilt-up buildings measuring 40,755 square feet and located on approximately 89,278 square feet of land located at 9010 South Norwalk Boulevard, Santa Fe Springs, California 90670",,Private sale,,,,,,,,,,Mark S. Blackburn and Ann M. Blackburn,Mark S. Blackburn and Ann M. Blackburn,2350000,0,Harlin Hale,txnbke,,,,2011-05-24,2011-04-15,,,,"D661, p2
 Order","D661, p2
 Order
@@ -1085,7 +1085,7 @@ Motion","D661, p2
 Order
 
 D536, p12
-Motion",,
+Motion",,,,,,,11
 2009-04-28,VOSC Inc; Victor Oolitic Stone Company,11,Substantially all of the assets of Victor Oolitic Stone Company,Audax Group Inc,Limestone Acquisition Corp,54189759,Senior lenders' expenses; Assumed liabilities,0,200000,"Expense reimbursement up to $200,000",450000,"Various adjustments - see (D186, p11) for more details","Various adjustments - see (D186, p11) for more details","Resilience Capital Partners LLC; Indiana Stone Acquisition Company; Marshall & Ilsley Corp, Fifth Third Bancorp, The Royal Bank of Scotland Group plc, and Huntington Bancshares Inc; Potentially others",Resilience Capital Partners LLC,Victor Acquisition Corp,73739636,Senior lenders' expenses; Assumed liabilities,Frank Otte,insbke,Goulston & Storrs,Kirkland & Ellis,2009-09-24,2009-11-20,2010-04-20,,,,"D236, p1
 Order","D167 Exhibit A, p27
 Motion
@@ -1108,7 +1108,7 @@ Order","D236, p5/28
 Order
 
 Includes first lien liabilities of approximately $53.989759mm, a credit bid of $19.449877mm, and expense reimbursement (to the stalking horse) up to $200,000","D236, p28
-Order",,,,,,,
+Order",,,,,,,,0,0.003690734,0.008304152,0.008304152,12
 2008-10-17,WorldSpace Inc,7,All or substantially all assets of Worldspace Inc and its debtor and non-debtor affiliates,,No stalking horse,,,,,,,,,Noah Samara; One other bidder,Noah Samara,Yazmi USA LLC,5500000,Assumed liabilities,Peter Walsh,debke,,,,2010-06-02,,,,,"D1042, p1
 Order","D1042, p9
 Order
@@ -1156,4 +1156,4 @@ Motion","D1042, p9
 Order
 
 D1002, p7
-Motion",,
+Motion",,,,,,,4

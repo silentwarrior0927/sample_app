@@ -11,11 +11,10 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'get'
   
   match '/search', to: 'data_pages#search', via: 'get'
-  match '/data_pages/debtor_suggestions.json', to: 'data_pages#debtor_suggestions', via: 'get'
   match '/display_tables', to: 'data_pages#display_tables', via: 'post'
-  # match '/display_tables', to: 'data_pages#display_tables', via: 'get'
+  match '/display_charts', to: 'data_pages#display_charts', via: 'get'
+  match '/data_pages/sales_in_json.json', to: 'data_pages#get_sales_in_json', via: 'get'
 
-  #get 'static_pages/about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

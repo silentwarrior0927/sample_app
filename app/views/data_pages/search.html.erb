@@ -15,7 +15,7 @@
 	</div>
 
 	<%= form_for(:sale, url: '/display_tables', :html => { id: "search_form", :style => "margin-bottom:35px; text-align:center" } ) do |f| %>
-		<%= f.text_field :debtor_searchfield, class: "typeahead", id: "search_field", placeholder: "Enter the name of a debtor, such as &quot;Hostess&quot;.".html_safe %>
+		<%= f.text_field :debtor_searchfield, class: "typeahead", id: "search_field", placeholder: "Start typing the name of a debtor, such as &quot;AgFeed&quot;.".html_safe %>
 		<%= f.submit "Search", id: "search_button", class: "btn btn-medium btn-primary" %>
 	<% end %>
 
@@ -24,7 +24,7 @@
 		<button style="margin:0" type="submit" class="btn btn-medium btn-primary">Search</button>
 	</form> -->
 
-	<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+	<!-- <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 
 		<div style="border:3px solid yellow" class="box col3">
 
@@ -38,4 +38,4 @@
 
 		</div>
 
-	</div>
+	</div> -->

@@ -202,9 +202,11 @@ td.data_cells {
   text-align: left;
 }
 
+td.data_cells-left {
+  vertical-align: top;
+}
+
 td.data_cells-right{
-  font-size: 12px;
-  text-align: left;
   padding-left: 20px;
 }
 
@@ -237,3 +239,51 @@ td.data_cells-right{
   border-right-color: #cc5314;
   background-color: #fff;
 }
+/*END data tables*/
+
+/*box-and-whisker plots*/
+ .box {
+  font: 10px Arial, sans-serif;
+}
+
+.box line,
+.box rect,
+ {
+  fill: #fff;
+  stroke: #7f7f7f;
+  stroke-width: 1.5px;
+}
+
+.box .center {
+  stroke-dasharray: 3,3;
+}
+
+.box .outlier {
+  fill: none;
+  stroke: #ccc;
+}
+/*END box-and-whisker plots*/
+
+/*force plot*/
+rect {
+  fill: white;
+}
+
+circle {
+  fill: white;
+  stroke: #000;
+  stroke-opacity: .5;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+/*END force plot*/
