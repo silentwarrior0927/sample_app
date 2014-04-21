@@ -14,7 +14,7 @@ class DataPagesController < ApplicationController
 		@results = Sale.search_by_debtor(params[:sale][:debtor_searchfield])
 
 		# Tell the UserMailer to send a welcome email after save
-		SearchMailer.search_notification_email(current_user).deliver
+		SearchMailer.search_notification_email(current_user, @query).deliver
 
 	end
 
