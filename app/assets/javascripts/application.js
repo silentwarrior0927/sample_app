@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require typeahead
 //= require popover.min
-//= require d3
+//= require d3.min
 //= require d3-boxandwhiskerplots
 //= require_tree .
 //= require masonry/jquery.masonry

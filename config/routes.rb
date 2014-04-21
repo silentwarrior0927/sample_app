@@ -14,7 +14,8 @@ SampleApp::Application.routes.draw do
   match '/display_tables', to: 'data_pages#display_tables', via: 'post'
   match '/display_charts', to: 'data_pages#display_charts', via: 'get'
   match '/data_pages/sales_in_json.json', to: 'data_pages#get_sales_in_json', via: 'get'
-
+  match '/data_pages/data_force_plot.csv', to: 'data_pages#get_data_force_plot', via: 'get'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
