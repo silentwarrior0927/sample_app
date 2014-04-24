@@ -18,7 +18,7 @@ class CreateSales < ActiveRecord::Migration
       t.text :bidder_list, array: true, default: []
       t.text :winner_parent, array: true, default: []
       t.text :winner, array: true, default: []
-      t.integer :winning_bid_1, array: true, default: []
+      t.integer :winning_bid_1
       t.text :winning_bid_text, array: true, default: []
       t.text :judge, array: true, default: []
       t.text :court, array: true, default: []

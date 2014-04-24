@@ -99,12 +99,12 @@
 // });
 // // END Breakup fee by judge comparison
 
-// Breakup fee versus consideration comparison
+// Breakup fee versus stalking horse bid comparison
 $(document).ready(function() {
 
 	if($('#breakup_fee_versus_consideration').length) {
 
-		var margin = {top: 26, right: 116, bottom: 10, left: 116};
+		var margin = {top: 26, right: 116, bottom: 10, left: 116},
 			w = 884.352 - margin.left - margin.right,
 			h = 400 - margin.top - margin.bottom;
 
@@ -155,7 +155,7 @@ $(document).ready(function() {
 			// Build legend
 			var legend = d3.select("#breakup_fee_versus_consideration svg").append("svg:svg")
 						   .attr("y", h)
-						   .attr("class", "legend")
+						   .attr("class", "legend");
 						
 			var legendGroups = legend.selectAll("g")
 									 .data([-1].concat(xColorScale.domain()), function(d) { return d; })
@@ -310,42 +310,44 @@ $(document).ready(function() {
 							// .call(force.drag)
 							.on("mouseenter", function(d) {
 
-								d3.select(this).style({ "stroke":"#000028", "stroke-width":"3" });
+								var thisCircle = d3.select(this);
+								
+								thisCircle.style({ "stroke":"#000028", "stroke-width":"3" });
 
 								// Get this bar's x/y values, then augment for the tooltip
-								var xPosition = parseFloat(d3.select(this).attr("cx")) + margin.left - 100;
-								if(parseFloat(d3.select(this).attr("cy")) <= h/2) {
-									var yPosition = margin.top + Number(parseFloat(d3.select(this).attr("cy"))) + Number(d.radius) + 8;
+								var xPosition = parseFloat(thisCircle.attr("cx")) + margin.left - 100;
+								if(parseFloat(thisCircle.attr("cy")) <= h/2) {
+									var yPosition = margin.top + Number(parseFloat(thisCircle.attr("cy"))) + Number(d.radius) + 8;
 									var bottom_or_top = "top";
-								} else if(parseFloat(d3.select(this).attr("cy")) >= h/2) {
-									var yPosition = margin.bottom + h - Number(parseFloat(d3.select(this).attr("cy"))) + Number(d.radius) + 8;
+								} else if(parseFloat(thisCircle.attr("cy")) >= h/2) {
+									var yPosition = margin.bottom + h - Number(parseFloat(thisCircle.attr("cy"))) + Number(d.radius) + 8;
 									var bottom_or_top = "bottom";
 								};
 								
 								// Update the tooltip position and value
-								d3.select("#sale_details")
+								d3.select("#sale_details2")
 								  .style("left", xPosition + "px")
 								  .style("top", null)
 								  .style(bottom_or_top, yPosition + "px");
 								
-								d3.select("#debtor")
+								d3.select("#debtor2")
 								  .text(d.data_debtor);
-								d3.select("#assets")
+								d3.select("#assets2")
 								  .text(d.data_assets);
-								d3.select("#stalking_horse_bid")
+								d3.select("#stalking_horse_bid2")
 								  .text(f2[1](d.data_stalking_horse_bid_1));
-								d3.select("#breakup_fee")
+								d3.select("#breakup_fee2")
 								  .text(f2[0](d.data_computation_breakup_fee_percentage_2));
 
 								// Display the tooltip and give it an appropriate height
-								d3.select("#sale_details").style("display", "block");
-								var table_height = $("#sale_details_table").height();
-								$("#sale_details").height(table_height + 2);
+								d3.select("#sale_details2").style("display", "block");
+								var table_height = $("#sale_details_table2").height();
+								$("#sale_details2").height(table_height + 2);
 
 							})
 							.on("mouseleave", function(d) {
 								d3.select(this).style({ "stroke":null, "stroke-width":null });
-								d3.select("#sale_details").style("display", "none");
+								d3.select("#sale_details2").style("display", "none");
 
 							});
 			
@@ -400,137 +402,211 @@ $(document).ready(function() {
 	}
 
 });
-// END Breakup fee versus consideration comparison
+// END Breakup fee versus stalking horse bid comparison
 
+// 363 sale market share comparison
 $(document).ready(function() {
 
-	// if($('#debtor_counsel_market_share').length) {
+	if($('#debtor_counsel_market_share').length) {
 
-	// 	var m3 = {top: 288, right: 884.352/2, bottom: 288, left: 884.352/2},
-	// 	r3 = Math.min(m3.top, m3.right, m3.bottom, m3.left) - 16;
+		var m3 = {top: 288, right: 884.352/2, bottom: 288, left: 884.352/2},
+			r3 = Math.min(m3.top, m3.right, m3.bottom, m3.left) - 16;
 
-	// 	var hue = d3.scale.category10();
-	// 	var luminance = d3.scale.sqrt()
-	// 							.domain([0, 1e6])
-	// 							.clamp(true)
-	// 							.range([90, 20]);
+		var f3 = [];
+		    f3[0] = d3.format(".1%");
+		    f3[1] = d3.format("$,.0");
 
-	// 	// Build visualization container
-	// 	var svg = d3.select("#debtor_counsel_market_share").append("svg")
-	// 				.attr("width", m3.left + m3.right)
-	// 				.attr("height", m3.top + m3.bottom)
-	// 				.style("display", "block")
-	// 			.append("g")
-	// 				.attr("transform", "translate(" + m3.left + "," + m3.top + ")");
+		var hue = d3.scale.category10();
+		var luminance = d3.scale.sqrt()
+								.domain([0, 1e6])
+								.clamp(true)
+								.range([90, 20]);
 
-	// 	var partition = d3.layout.partition()
-	// 					  .size([2 * Math.PI, r3]);
+		// Build visualization container
+		var svg = d3.select("#debtor_counsel_market_share").append("svg:svg")
+					.attr("width", m3.left + m3.right)
+					.attr("height", m3.top + m3.bottom)
+					.style("display", "block")
+				.append("g")
+					.attr("id", "container")
+					.attr("transform", "translate(" + m3.left + "," + m3.top + ")");
 
-	// 	var arc = d3.svg.arc()
-	// 				.startAngle(function(d) { return d.x; })
-	// 				.endAngle(function(d) { return d.x + d.dx - .01 / (d.depth + .5); })
-	// 				.innerRadius(function(d) { return r3/6 * (3*(d.depth===1) + 5*(d.depth===2)); })
-	// 				.outerRadius(function(d) { return r3/6 * (4*(d.depth===1) + 6*(d.depth===2)); });
+		// Build partition layout
+		var partition = d3.layout.partition()
+						  .size([2 * Math.PI, r3]);
 
-	// 	var f3 = d3.format(".1%");
+		// Configure foreground arcs
+		var arc = d3.svg.arc()
+					.startAngle(function(d) { return d.x; })
+					.endAngle(function(d) { return d.x + d.dx - .01 / (d.depth + .5); })
+					.innerRadius(function(d) { return r3/6 * (3*(d.depth===1) + 5*(d.depth===2)); })
+					.outerRadius(function(d) { return r3/6 * (4*(d.depth===1) + 6*(d.depth===2)); });
 
-	// 	d3.json("/data_pages/sales_in_json.json", function(error, root) {
+		var startMessage = $("#start_message");
+		var saleDetails = $("#sale_details3");
 
-	// 		var total = d3.sum(root, function(d) { return d.stalking_horse_bid_1 });
+		// Build legend
+		var legend = d3.select("#debtor_counsel_market_share").append("svg:svg")
+					   .attr("height", 25)
+					   .attr("width", 884.352)
+					   .attr("class", "legend")
+					   .style("display", "block");
+		legend.append("text")
+				  .attr("x", 116 / 2)
+				  .attr("y", 14)
+				  .attr("text-anchor", "middle")
+				  .text("LEGEND:");
+		legend.append("text")
+			  .attr("x", 116)
+			  .attr("y", 8)
+			  .append("tspan")
+				.text("Each sector of the ")
+			  .append("tspan")
+				.style("font-weight", "bold")
+				.text("INNER RING ")
+			  .append("tspan")
+				.style("font-weight", "normal")
+				.text("represents the total value of all §363 sales run by a particular law firm as a percentage of the total value of all §363 sales.");
+		legend.append("text")
+			  .attr("x", 116)
+			  .attr("y", 20)
+			  .append("tspan")
+				.text("Each sector of the ")
+			  .append("tspan")
+				.style("font-weight", "bold")
+				.text("OUTER RING ")
+			  .append("tspan")
+				.style("font-weight", "normal")
+				.text("represents the value of a particular §363 sale as a percentage of the total value of all §363 sales.");
 
-	// 		var data = root;
+		d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
 
-	// 		var newData = {"name": "root", "children": {}}
+			// Print data load error
+			if(error) console.log(error);
 
-	// 		data.forEach(function (d) {
-	// 			if (typeof newData.children[d.debtor_counsel[0]] !== 'undefined') {
-	// 				newData.children[d.debtor_counsel[0]].children.push(d)
-	// 			} else {
-	// 				newData.children[d.debtor_counsel[0]] = {"name": d.debtor_counsel[0], "children": [d]}
-	// 			}
-	// 		})
-	// 		newData.children = Object.keys(newData.children).map(function (key) {
-	// 			return newData.children[key];
-	// 		});
+			// // TO ELIMINATE
 
-	// 		root = newData;
+			// data = root;
 
-	// 		partition.value(function(d) { return d.stalking_horse_bid_1/10000; })
-	// 				 .nodes(root)
-	// 				 .forEach(function(d) {
-	// 					d._children = d.children;
-	// 					d.sum = d.value;
-	// 					d.key = key(d);
-	// 					d.fill = fill(d);
-	// 				 });
+			// var newData = {"name": "root", "children": {}}
 
-	// 		// Now redefine the value function to use the previously-computed sum.
-	// 		// partition.children(function(d, depth) { return depth < 2 ? d._children : null; })
-	// 		// 		 .value(function(d) { return d.sum; });
-	// 		// console.log(partition.nodes(root).slice(1))
-	// 		var path = svg.selectAll("path")
-	// 					  .data(partition.nodes(root).slice(1))
-	// 					  .enter()
-	// 					.append("path")
-	// 					  .attr("d", arc)
-	// 					  .style("fill", function(d) { return d.fill; })
-	// 					  .on("mouseenter", mouseenter)
-	// 					  .on("mouseleave", mouseleave);
+			// data.forEach(function (d) {
+			// 	if (typeof newData.children[d.debtor_counsel[0]] !== 'undefined') {
+			// 		newData.children[d.debtor_counsel[0]].children.push(d)
+			// 	} else {
+			// 		newData.children[d.debtor_counsel[0]] = {"name": d.debtor_counsel[0], "children": [d]}
+			// 	}
+			// })
+			// newData.children = Object.keys(newData.children).map(function (key) {
+			// 	return newData.children[key];
+			// });
 
-	// 		function mouseenter(d) {
-	// 			$("#start_message").css("visibility", "hidden");
-	// 			if(d.name) {
-	// 				svg.append("svg:text")
-	// 				   .attr("x", function(d) { return 0; })
-	// 				   .attr("y", function(d) { return 0; })
-	// 				   .attr("text-anchor", "middle")
-	// 				   .attr("fill", "#7f7f7f")
-	// 				   .attr("font-family", "Franklin Gothic Book, 'franklin_gothic_bookregular', sans-serif")
-	// 				   .attr("font-size", "88px")
-	// 				   .text(f3(d.value*10000/total));
-	// 				svg.append("svg:text")
-	// 				   .attr("x", function(d) { return 0; })
-	// 				   .attr("y", function(d) { return 63; })
-	// 				   .attr("text-anchor", "middle")
-	// 				   .attr("fill", "#7f7f7f")
-	// 				   .attr("font-family", "Arial, sans-serif")
-	// 				   .attr("font-size", "14px")
-	// 				   .text(d.name);
-	// 			} else {
-	// 				svg.append("svg:text")
-	// 				   .attr("x", function(d) { return 0; })
-	// 				   .attr("y", function(d) { return 63; })
-	// 				   .attr("text-anchor", "middle")
-	// 				   .attr("fill", "#7f7f7f")
-	// 				   .attr("font-family", "Arial, sans-serif")
-	// 				   .attr("font-size", "14px")
-	// 				   .text(d.debtor_counsel[0]);
-	// 			}
-	// 		}
+			// root = newData;
 
-	// 		function mouseleave(d) {
-	// 			svg.selectAll("text").remove();
-	// 			$("#start_message").css("visibility", "visible")
-	// 		}
+			// console.log(JSON.stringify(root))
 
-	// 	});
+			// // END TO ELIMINATE
 
-	// 	function fill(d) {
-	// 		var p = d;
-	// 		while (p.depth > 1) p = p.parent;
-	// 		var c = d3.lab(hue(p.name));
-	// 		c.l = luminance(d.sum);
-	// 		return c;
-	// 	}
+			var total = document.getElementById("total_value_of_sales").innerHTML;
 
-	// 	function key(d) {
-	// 		var k = [], p = d;
-	// 		while (p.depth) k.push(p.name), p = p.parent;
-	// 		return k.reverse().join(".");
-	// 	}
+			partition.value(function(d) { return d.winning_bid_1/10000; })
+					 .nodes(root)
+					 .forEach(function(d) {
+						d._children = d.children;
+						d.sum = d.value;
+						d.key = key(d);
+						d.fill = fill(d);
+					 });
 
-	// 	d3.select(self.frameElement).style("height", m3.top + m3.bottom + "px");
+			// Now redefine the value function to use the previously-computed sum.
+			// partition.children(function(d, depth) { return depth < 2 ? d._children : null; })
+			// 		 .value(function(d) { return d.sum; });
+			// console.log(partition.nodes(root).slice(1))
+			var path = svg.selectAll("path .chunks")
+						  .data(partition.nodes(root).slice(1))
+						  .enter()
+						.append("path")
+						  .attr("d", arc)
+						  .style("fill", function(d) { return d.fill; })
+						  .on("mouseenter", mouseenter)
+						  .on("mouseleave", function() { d3.select(this).style({ "stroke":null, "stroke-width":null }); });
 
-	// };
+			function mouseenter(d) {
+				svg.selectAll("text").remove();
+				startMessage.css("visibility", "hidden");
+				d3.select(this).style({ "stroke":"#000028", "stroke-width":"1.5" });
+				if(d.name) {
+					var marketShareLabel = svg.append("svg:text")
+											  .attr("x", 0)
+											  .attr("y", 0)
+											  .attr("class", "chart3_bigtext")
+											  .text(f3[0](d.value*10000/total));
+					var firmLabel = svg.append("svg:text")
+									   .attr("x", 0)
+									   .attr("y", 63)
+									   .attr("class", "chart3_smalltext")
+									   .text(d.name);
+				} else {
+					var marketShareLabel = svg.append("svg:text")
+											  .attr("x", 0)
+											  .attr("y", 103)
+											  .attr("class", "chart3_mediumtext")
+											  .text(f3[0](d.value*10000/total));
+					d3.select("#debtor3")
+					  .text(d.debtor.join(" / "));
+					d3.select("#assets3")
+					  .text(d.assets.join("; "));
+					d3.select("#winning_bid3")
+					  .text(f3[1](d.winning_bid_1));
+					d3.select("#debtor_counsel3")
+					  .text(d.debtor_counsel[0]);
+					saleDetails.css("visibility", "visible");
+				}
+			}
+
+		});
+
+		// Build background arcs
+		var backgroundArc1 = d3.svg.arc()
+								   .startAngle(0)
+								   .endAngle(2 * Math.PI)
+								   .innerRadius(r3 / 2)
+								   .outerRadius(r3 * 2 / 3);
+		var backgroundArc2 = d3.svg.arc()
+								   .startAngle(0)
+								   .endAngle(2 * Math.PI)
+								   .innerRadius(r3 * 5 / 6)
+								   .outerRadius(r3);
+		var backgroundArc1 = svg.append("path")
+								.attr("class", "chart3_backgroundarc")
+    							.attr("d", backgroundArc1);
+    	var backgroundArc1 = svg.append("path")
+    							.attr("class", "chart3_backgroundarc")
+    							.attr("d", backgroundArc2);
+    	function mouseleave(d) {
+			svg.selectAll("text").remove();
+			startMessage.css("visibility", "visible");
+			saleDetails.css("visibility", "hidden");
+
+		}
+    	d3.select("#container").on("mouseleave", mouseleave);
+
+		function fill(d) {
+			var p = d;
+			while (p.depth > 1) p = p.parent;
+			var c = d3.lab(hue(p.name));
+			c.l = luminance(d.sum);
+			return c;
+		}
+
+		function key(d) {
+			var k = [], p = d;
+			while (p.depth) k.push(p.name), p = p.parent;
+			return k.reverse().join(".");
+		}
+
+		d3.select(self.frameElement).style("height", m3.top + m3.bottom + "px");
+
+	};
 
 });

@@ -288,8 +288,7 @@ circle {
   font-size: 12px;
 }
 
-#sale_details {
-  padding: 10px;
+.sale_details {
   position: absolute;
   width: 200px;
   background-color: white;
@@ -297,10 +296,47 @@ circle {
   pointer-events: none;
 }
 
-svg.legend {
+.legend {
   fill: #7f7f7f;
   font-family: Arial, sans-serif;
   font-size:11px;
 }
 
 /*END force plot*/
+
+/*pie chart*/
+.chart3_backgroundarc {
+  fill: #fff;
+  opacity: 0;
+}
+
+.chart3_bigtext {
+  fill: #7f7f7f;
+  font-family: Franklin Gothic Book, 'franklin_gothic_bookregular', sans-serif;
+  font-size: 88px;
+  text-anchor: middle;
+}
+
+.chart3_mediumtext {
+  fill: #7f7f7f;
+  font-family: Franklin Gothic Book, 'franklin_gothic_bookregular', sans-serif;
+  font-size: 63px;
+  text-anchor: middle;
+}
+
+.chart3_smalltext {
+  fill: #7f7f7f;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-anchor: middle;
+}
+
+#sale_details3 {
+  top: 176px;
+  left: 342.176px;
+  background: rgba(255,255,255,0);
+  border: none;
+  font-size: 11.5px;
+  line-height: 13px;
+}
+/*END pie chart*/

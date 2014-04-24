@@ -220,7 +220,7 @@
 								</tr>
 								<tr>
 									<td class="data_cells data_cells-left">Winning bid:</td>
-									<td class="data_cells data_cells-right"><%= number_to_currency(sale.winning_bid_1[0], precision: 0) %></td>
+									<td class="data_cells data_cells-right"><%= number_to_currency(sale.winning_bid_1, precision: 0) %></td>
 									<td class="data_source"><%=link_to content_tag(:span, "", class: "glyphicon glyphicon-info-sign"), '#', title: simple_format(sale.comments_on_winning_bid_1) %></td>
 								</tr>
 								<% if sale.winning_bid_text[0].casecmp("0") != 0 %>

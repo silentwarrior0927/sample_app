@@ -19,9 +19,19 @@ class DataPagesController < ApplicationController
 	end
 
 	def display_charts
+		@total_value_of_sales = Sale.where.not(winning_bid_1: nil).sum(:winning_bid_1)
+
 	end
 
 	def get_data_force_plot
+		render layout: false
+	end
+
+	def get_data_sunburst
+		@sales_in_json = Sale.order(winning_bid_1: :desc).where.not(winning_bid_1: nil)
+	end
+
+	def get_data_sunburst_static
 		render layout: false
 	end
 

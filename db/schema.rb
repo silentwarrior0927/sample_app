@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140408001820) do
     t.text     "bidder_list",                                default: [], array: true
     t.text     "winner_parent",                              default: [], array: true
     t.text     "winner",                                     default: [], array: true
-    t.integer  "winning_bid_1",                              default: [], array: true
+    t.integer  "winning_bid_1"
     t.text     "winning_bid_text",                           default: [], array: true
     t.text     "judge",                                      default: [], array: true
     t.text     "court",                                      default: [], array: true
