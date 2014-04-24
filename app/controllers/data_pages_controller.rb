@@ -1,6 +1,6 @@
 class DataPagesController < ApplicationController
 	
-	def search
+	def home
 	end
 
 	def get_sales_in_json

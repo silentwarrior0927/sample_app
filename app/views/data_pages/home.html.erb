@@ -1,0 +1,81 @@
+<% provide(:title, "Welcome back.") %>
+
+<div class="container">	
+	
+	<div style="margin-top:50px; margin-bottom:31px">
+		
+		<div style="width:26%; float:left; text-align:center">	
+			<img src="/assets/Logo v3 transparent small.png" alt="Logo" >
+		</div>
+		<div style="width:72%; height:200px; float:right; font-size:0; text-align:center">
+			<span style="height:100%; display:inline-block; vertical-align:middle"></span>
+			<h1 style="display:inline-block; vertical-align:middle; font-family:Franklin Gothic Book, 'franklin_gothic_bookregular', sans-serif; font-size:63px; color:#ccc">Welcome back, <%= current_user.fname %>. </h1>
+		</div>
+
+	</div>
+
+	<div style="width:100%; margin:0px auto; background-color:#fff; border-top:6px solid #fff; border-bottom:asdf6px solid #fff">
+        <div style="width:100%; margin:auto; padding-left:6px; background-color:#000028; color:#fff; text-align:left">
+            Search for a debtor
+        </div>
+    </div>
+
+	<div style="margin:0px 0px 35px 0px; width:100%; background-color:#fff; border-top:6px solid #fff; border-bottom:6px solid #fff; ">
+		<div style="margin:auto; width:98%">
+			<%= form_for(:sale, url: '/display_tables', :html => { id: "search_form", :style => "margin:16px auto 16px auto; width:88%; text-align:center" } ) do |f| %>
+				<%= f.text_field :debtor_searchfield, class: "typeahead", id: "search_field", placeholder: "Start typing the name of a debtor, such as &quot;AgFeed&quot;.".html_safe %>
+				<%= f.submit "Search", id: "search_button", class: "btn btn-medium btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+
+	<div style="width:100%; margin:0px auto; background-color:#fff; border-top:6px solid #fff; border-bottom:asdf6px solid #fff">
+        <div style="width:100%; margin:auto; padding-left:6px; background-color:#000028; color:#fff; text-align:left">
+            View LIVECharts
+        </div>
+    </div>
+
+	<div style="margin:0px 0px 35px 0px; width:100%; background-color:#fff; border-top:6px solid #fff; border-bottom:6px solid #fff; ">
+		<div style="margin:auto; width:98%; color:#7f7f7f; text-align:center">
+			<span style="display:inline-block; margin-top:16px; font-weight:bold">Gain insights that you can leverage at the negotiating table and in the courtroom.</span>
+			<br>
+			<%= link_to('View', display_charts_path, class: "btn btn-medium btn-primary", style: "margin: 16px auto 16px auto") %>
+		</div>
+	</div>
+
+	<div style="width:100%; margin:0px auto; background-color:#fff; border-top:6px solid #fff; border-bottom:asdf6px solid #fff">
+        <div style="width:100%; margin:auto; padding-left:6px; background-color:#000028; color:#fff; text-align:left">
+            Contact 24/7 support
+        </div>
+    </div>
+
+	<div style="margin:0px 0px 35px 0px; width:100%; background-color:#fff; border-top:6px solid #fff; border-bottom:6px solid #fff; ">
+		<div style="margin:auto; padding-bottom:16px; width:98%; color:#7f7f7f; text-align:center">
+			<span style="display:inline-block; margin-top:16px; font-weight:bold">We're here for you.</span>
+			<br>
+			<br>
+			We know that you've burned more than your fair share of midnight oil.
+			<br>
+			So, if you need help finding data or creating charts, just shoot us an email or give us a ring (john.hartsfeld@363live.com / 205-315-9630).
+			<br>
+			<br>
+			We'll hook you up. Even at 3:00 A.M.
+			<br>
+		</div>
+	</div>
+
+	<!-- <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+
+		<div style="border:3px solid yellow" class="box col3">
+
+			<div style="border:3px solid pink" class="box col1">
+				<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
+			</div>
+
+			<div style="border:3px solid green" class="box col2">
+				<p><a href="http://www.flickr.com/photos/nemoorange/3319714470/" title="Whitlow's on Wilson by nemoorange, on Flickr"><img src="http://farm4.static.flickr.com/3008/3319714470_c05a5cb5a8_m.jpg" alt="Whitlow's on Wilson" /></a></p>
+			</div>
+
+		</div>
+
+	</div> -->

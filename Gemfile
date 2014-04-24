@@ -11,6 +11,7 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'masonry-rails', '0.2.1'
 gem 'pg_search'
+gem 'jquery-turbolinks'
 
 
 group :development, :test do

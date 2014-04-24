@@ -10,7 +10,7 @@ SampleApp::Application.routes.draw do
   match '/signin', to: 'sessions#create', via: 'post'
   match '/signout', to: 'sessions#destroy', via: 'get'
   
-  match '/search', to: 'data_pages#search', via: 'get'
+  match '/home', to: 'data_pages#home', via: 'get'
   match '/display_tables', to: 'data_pages#display_tables', via: 'post'
   match '/display_charts', to: 'data_pages#display_charts', via: 'get'
   match '/data_pages/sales_in_json.json', to: 'data_pages#get_sales_in_json', via: 'get'

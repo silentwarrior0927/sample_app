@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 		# Sign the user in and redirect to the user's show page.
 			# render text: "OK"
 			sign_in user
-			redirect_to '/search'
+			redirect_to '/home'
 		else
 		# Create an error message and re-render the signin form.
 			flash.now[:error] = 'Invalid email <br> and/or password'.html_safe
