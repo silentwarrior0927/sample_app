@@ -3,11 +3,6 @@ class DataPagesController < ApplicationController
 	def home
 	end
 
-	def get_sales_in_json
-		# @suggestions = Sale.search_by_debtor(params[:q])
-		@sales_in_json = Sale.order(stalking_horse_bid_1: :desc).where.not(stalking_horse_bid_1: nil)
-	end
-
 	def display_tables
 
 		@query = params[:sale][:debtor_searchfield]
@@ -19,11 +14,16 @@ class DataPagesController < ApplicationController
 	end
 
 	def display_charts
+		@highest_breakup_fee_percentage = Sale.maximum("computation_breakup_fee_percentage_2")
 		@total_value_of_sales = Sale.where.not(winning_bid_1: nil).sum(:winning_bid_1)
-
 	end
 
-	def get_data_force_plot
+	def get_data_histogram
+		# @suggestions = Sale.search_by_debtor(params[:q])
+		@sales_in_json = Sale.order(stalking_horse_bid_1: :desc).where.not(stalking_horse_bid_1: nil)
+	end
+
+	def get_data_force_plot_static
 		render layout: false
 	end
 

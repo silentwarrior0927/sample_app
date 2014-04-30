@@ -17,7 +17,6 @@
 //= require typeahead
 //= require popover.min
 //= require d3.min
-//= require d3-boxandwhiskerplots
 //= require_tree .
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag

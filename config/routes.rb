@@ -13,8 +13,8 @@ SampleApp::Application.routes.draw do
   match '/home', to: 'data_pages#home', via: 'get'
   match '/display_tables', to: 'data_pages#display_tables', via: 'post'
   match '/display_charts', to: 'data_pages#display_charts', via: 'get'
-  match '/data_pages/sales_in_json.json', to: 'data_pages#get_sales_in_json', via: 'get'
-  match '/data_pages/data_force_plot.csv', to: 'data_pages#get_data_force_plot', via: 'get'
+  match '/data_pages/data_histogram.json', to: 'data_pages#get_data_histogram', via: 'get'
+  match '/data_pages/data_force_plot_static.csv', to: 'data_pages#get_data_force_plot_static', via: 'get'
   match '/data_pages/data_sunburst.json', to: 'data_pages#get_data_sunburst', via: 'get'
   match '/data_pages/data_sunburst_static.json', to: 'data_pages#get_data_sunburst_static', via: 'get'
   

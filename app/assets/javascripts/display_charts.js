@@ -1,103 +1,257 @@
-// // Breakup fee by judge comparison
+// Breakup fee by judge comparison
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
-// 	if($('#breakup_fee_comparison_by_judge').length) {
+	if($('#breakup_fee_comparison_by_judge').length) {
 
-// 		// Returns a function to compute the interquartile range.
-// 		function iqr(k) {
-// 			return function(d, i) {
-// 				var q1 = d.quartiles[0],
-// 					q3 = d.quartiles[2],
-// 					iqr = (q3 - q1) * k,
-// 					i = -1,
-// 					j = d.length;
-// 				while (d[++i] < q1 - iqr);
-// 				while (d[--j] > q3 + iqr);
-// 				return [i, j];
-// 			};
-// 		}
+		// // Function to generate Gaussian pdf
+		// function normalPdf(x, mean, stddev) {
+		// 	var y = 1 / (stddev * Math.sqrt(2 * Math.PI)) * Math.pow(Math.E, - (Math.pow(x - mean, 2) / (2 * Math.pow(stddev, 2))));
+		// 	//console.log('normal', x, mean, stddev, y);
+		// 	return y;
+		// };
 
-// 		var margin = {top: 10, right: 116, bottom: 116, left: 116},
-// 		    width = 293 - margin.left - margin.right,
-// 		    height = 500 - margin.top - margin.bottom;
-// 		$("#breakup_fee_comparison_by_judge").css("height", height + margin.top + margin.bottom);
+		var margin = {top: 0, right: 233, bottom: 31, left: 233},
+			w = 884.352 - margin.left - margin.right,
+			h = 168 - margin.top - margin.bottom;
 
-// 		var min = Infinity,
-// 		    max = -Infinity;
+		// // Configure pdfs
+		// var pdf = d3.svg.line()
+		// 				.x(function(d) { return xScale(d.xval); })
+		// 				.y(function(d) { return yScale(normalPdf(d.xval, d.mean, .015)); })
+		// 				.interpolate("basis");
 
-// 		var chart = d3.box()
-// 		    .whiskers(iqr(1.5))
-// 		    .width(width)
-// 		    .height(height);
+		// Format numbers
+		var f1 = [];
+			f1[0] = d3.format(".1%");
+			f1[1] = d3.format("$,.0");
 
-// 		d3.json("/data_pages/sales_in_json.json", function(error, json) {
+		// Build scales & axis
+		var max = document.getElementById("highest_breakup_fee_percentage").innerHTML;
+		var xScale = d3.scale.linear()
+				   .domain([0, max])
+				   .range([0, w]);
+		var xAxis = d3.svg.axis()
+					  .scale(xScale)
+					  .orient("bottom")
+					  .tickSize(-6, -5)
+					  .tickFormat(f1[0]);		   
+		var yScale = d3.scale.linear()
+					   .domain([0, 30])
+					   .range([h, 0]);
+
+		d3.json("/data_pages/data_histogram.json", function(error, json) {
+
+			// Count number of cases assigned to each judge
+			var caseCountJson = JSON.parse(JSON.stringify(json))
+			caseCountJson = d3.nest()
+							  .key(function(d) { return d.judge })
+							  .rollup(function(leaves) { return leaves.length })
+							  .entries(caseCountJson);
+
+			// Build data points
+			// Determine which judges get their own graphs
+			var bucketSize = .005;
+			json.forEach(function(d) {
+				d.xType = Math.floor(d.computation_breakup_fee_percentage_2 / bucketSize);
+				d.x = xScale(d.xType * bucketSize + .0005);
+
+				for(var i = 0; i < caseCountJson.length; i++) {
+					if(caseCountJson[i].key == d.judge) {
+						if(caseCountJson[i].values >= 4) {
+							d.judgeGraph = d.judge;
+							var tempJson = JSON.parse(JSON.stringify(d));
+							tempJson.judgeGraph = "all";
+							json.push(tempJson);
+						} else d.judgeGraph = "all";
+						break;
+					}
+				}
+			});
+			// Compute quartiles of box-and-whisker plots
+			var quartilesJson = JSON.parse(JSON.stringify(json));
+			quartilesJson = d3.nest()
+							  .key(function(d) { return d.judgeGraph; }).sortKeys(d3.ascending)
+							  .sortValues(function(a,b) { return a.computation_breakup_fee_percentage_2 - b.computation_breakup_fee_percentage_2; })
+							  .rollup(function(leaves) {	
+							  								breakupFees = [];
+							  								for(var i = 0; i < leaves.length; i++) {
+							  									breakupFees.push(leaves[i].computation_breakup_fee_percentage_2);
+							  								}
+							  								breakupFees.sort(d3.ascending);
+							  								return { min: d3.min(breakupFees), first: d3.quantile(breakupFees, .25), median: d3.quantile(breakupFees, .5), third: d3.quantile(breakupFees, .75), max: d3.max(breakupFees) };
+							  						   })
+							  .entries(quartilesJson);
+			// Compute y-positions
+			json = d3.nest()
+					 .key(function(d) { return d.judgeGraph; }).sortKeys(d3.ascending)
+					 .sortValues(function(a,b) { return a.computation_breakup_fee_percentage_2 - b.computation_breakup_fee_percentage_2; })
+					 .entries(json);
+			for(i = 0; i < json.length; i++) {
+				var startxType = json[i].values[0].xType,
+					startk = -1;
+				for(j = 0; j < json[i].values.length; j++) {
+					if(json[i].values[j].xType > startxType) {
+						startxType = json[i].values[j].xType;
+						startk = 0;
+					} else startk++;
+					json[i].values[j].yType = startk;
+					json[i].values[j].y = -8 + yScale(json[i].values[j].yType*1.68)
+				}
+			}
 			
-// 			var data = [];
+			// Build visualization container
+			var svg = d3.select("#breakup_fee_comparison_by_judge").selectAll("svg")
+																   .data(json)
+																   .enter()
+																.append("svg:svg")
+																   .attr("width", w + margin.left + margin.right)
+																   .attr("height", h + margin.top + margin.bottom)
+																   .attr("class", "box")
+																   .style("display", "block")
+																   // .style("border", "1px solid red")
+																   .style("border-bottom", "1px solid #e9e9e9")
+																.append("g")
+																   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// 			// Determine number of sales that each judge presided over
-// 			var num_judges = Math.max.apply(Math, json.map( function(o) {return o.computation_judge_code;} )) + 1;
-// 			var sales_per_judge = []
-// 			for(var i = 0; i < num_judges; i++) {
-// 				sales_per_judge[i] = 0;
-// 			}
-// 			for(var i = 0; i < json.length; i++) {
-// 				sales_per_judge[json[i].computation_judge_code]++; 
-// 			}
+			// Display title & axis
+			svg.append("text")
+			   .attr("class", "title")
+			   .attr("x", w / 2)
+			   .attr("y", 16)
+			   .text(function(d) { if(d.values[0].judgeGraph == "all") return "All judges"; else return d.values[0].judgeGraph[0] + " - " + d.values[0].court[0]; })
+			svg.append("g")
+			   .attr("class", "axis")
+			   .attr("transform", "translate(" + 0 + "," + (margin.top + h) + ")")
+			   .call(xAxis)
+			.append("text")
+			   .attr("text-anchor", "middle")
+			   .attr("x", w / 2)
+			   .attr("y", 26)
+			   .text("Breakup fee + expense reimbursement as a percentage of stalking horse bid");
 
-// 			// Determine which judges presided over fewer than numsales_lowerlimit sales
-// 			var numsales_lowerlimit = 5;
-// 			var index_of_numsales_lowerlimit = -1 ;
-// 			for(var i = 0; i < sales_per_judge.length; i++) {
-// 				if(sales_per_judge[i] < numsales_lowerlimit) {
-// 					index_of_numsales_lowerlimit = i;
-// 					break;
-// 				}
-// 			}
+			// Display data points
+			svg.selectAll("rect .sale")
+			   .data(function(d) { return d.values; })
+			   .enter()
+			   .append("rect")
+			   .attr("class", "sale")
+			   .attr("x", function(d) { return d.x; })
+			   .attr("y", function(d) { return d.y; })
+			   .attr("width", 31)
+			   .attr("height", 6)
+			   .on("mouseenter", function(d) {
+									
+									var thisRect = d3.select(this);
+									thisRect.style({ "fill":"#8b8bc2", "stroke":"#000028", "stroke-width":"2" });
 
-// 			// Build data array & find min and max of data
-// 			for(var i = 0; i < json.length; i++) {
-				
-// 				var breakup_fee_current = json[i].computation_breakup_fee_percentage_2
-// 				if(sales_per_judge[json[i].computation_judge_code] < numsales_lowerlimit) {
-// 					var judge = index_of_numsales_lowerlimit; // "other" judge
-// 				} else {
-// 					var judge = json[i].computation_judge_code;
-// 				}
-// 				if (!data[judge]) {
-// 					// data is an array of arrays
-// 					data[judge] = [json[i]];
-// 				}
-// 				else data[judge].push(json[i]);
-				
-// 				if (breakup_fee_current > max) max = breakup_fee_current;
-// 				if (breakup_fee_current < min) min = breakup_fee_current;
-// 			}
+									// Get this bar's x/y values, then augment for the tooltip
+									var xPosition = this.getBoundingClientRect().left + window.scrollX;
+									var yPosition = this.getBoundingClientRect().top + window.scrollY;
+									console.log("x: " + xPosition + ", y: " + yPosition);
+									// Update the tooltip position and value
+									d3.select("#sale_details1")
+									  .style("left", xPosition + "px")
+									  .style("top", yPosition + 12 + "px");
+									
+									d3.select("#debtor1")
+									  .text(d.debtor.join(" / "));
+									d3.select("#assets1")
+									  .text(d.assets.join("; "));
+									d3.select("#stalking_horse_bid1")
+									  .text(f1[1](d.stalking_horse_bid_1[0]));
+									d3.select("#breakup_fee1")
+									  .text(f1[0](d.computation_breakup_fee_percentage_2))
+									d3.select("#judge1")
+									  .text(d.judge + " - " + d.court);
 
-// 			chart.domain([min, max]);
+									// Display the tooltip and give it an appropriate height
+									d3.select("#sale_details1").style("display", "block");
+									var table_height = $("#sale_details_table1").height();
+									$("#sale_details1").height(table_height + 2);
 
-// 			var bw_plots = d3.select("#breakup_fee_comparison_by_judge").selectAll("svg")
-// 								  .data(data)	
-// 								  .enter()
-// 								  .append("svg")
+							})
+			   .on("mouseleave", function(d) {
+					d3.select(this).style({ "fill":"#3d3d99", "stroke":null, "stroke-width":null });
+					d3.select("#sale_details1").style("display", "none").style("left", "0px").style("top", "0px");
+			   });
 
-// 								  .attr("class", "box")
-// 								  .attr("width", width + margin.left + margin.right)
-// 								  .attr("height", height + margin.bottom + margin.top)
-// 								  // .style("border", "1px solid red")
-// 								  .style("display", "block")
-// 								  .style("float", "left")
-								  
-// 								  .append("g")
-// 								  .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-// 								  .call(chart);
+			// Display box-and-whisker plot
+			bw = svg.data(quartilesJson);
+			bw.append("svg:line")
+			  .attr("class", "bw_plot bw_plot-dash")
+			  .attr("x1", function(d) { return xScale(d.values.min); })
+			  .attr("x2", function(d) { return xScale(d.values.max); })
+			  .attr("y1", function(d) { return h / 2; })
+			  .attr("y2", function(d) { return h / 2; });
+			bw.append("svg:rect")
+			  .attr("class", "bw_plot")
+			  .attr("x", function(d) { return xScale(d.values.first); })
+			  .attr("y", function(d) { return h / 2 - 8; })
+			  .attr("width", function(d) { return xScale(d.values.third) - xScale(d.values.first); })
+			  .attr("height", 16)
+			bw.append("svg:line")
+			  .attr("class", "bw_plot")
+			  .attr("x1", function(d) { return xScale(d.values.min); })
+			  .attr("x2", function(d) { return xScale(d.values.min); })
+			  .attr("y1", function(d) { return h / 2 - 8.6; })
+			  .attr("y2", function(d) { return h / 2 + 8.6; });
+			bw.append("svg:line")
+			  .attr("class", "bw_plot")
+			  .attr("x1", function(d) { return xScale(d.values.median); })
+			  .attr("x2", function(d) { return xScale(d.values.median); })
+			  .attr("y1", function(d) { return h / 2 - 8; })
+			  .attr("y2", function(d) { return h / 2 + 8; });
+			bw.append("svg:line")
+			  .attr("class", "bw_plot")
+			  .attr("x1", function(d) { return xScale(d.values.max); })
+			  .attr("x2", function(d) { return xScale(d.values.max); })
+			  .attr("y1", function(d) { return h / 2 - 8.6; })
+			  .attr("y2", function(d) { return h / 2 + 8.6; });
 
-// 		});
+			// // Display Pdf
+			// var xForPdf = [];
+			// for (var i = 0; i < max*1000; i++) {
+			// 	xForPdf.push({xval: i/1000});
+			// }
+			// xForPdf.push({xval: max})
+			// console.log(xForPdf)
+			// svg.data(parameterJson)
+			//    .append("svg:path")
+			//    .attr("d", function(d) {
+			// 							for(var i = 0; i < xForPdf.length; i++) {
+			// 								xForPdf[i].mean = d.values;
+			// 							}
+			// 							return pdf(xForPdf);
+			// 						  })
+			//    .attr("class", "pdf");
 
-// 	}
+			// // Display titles
+			// svg.append("text")
+			//    .attr("x", 0)
+			//    .attr("y", 20)
+			//    .text(function(d) { return d.key + " (" + d.values[0].court + ")"});
+			
+		});
 
-// });
-// // END Breakup fee by judge comparison
+	};
+
+	// Returns a function to compute the interquartile range.
+	function iqr(k) {
+		return function(d, i) {
+			var q1 = d.quartiles[0],
+			q3 = d.quartiles[2],
+			iqr = (q3 - q1) * k,
+			i = -1,
+			j = d.length;
+			while (d[++i] < q1 - iqr);
+			while (d[--j] > q3 + iqr);
+			return [i, j];
+		};
+	}
+
+});
+// END Breakup fee by judge comparison
 
 // Breakup fee versus stalking horse bid comparison
 $(document).ready(function() {
@@ -122,8 +276,8 @@ $(document).ready(function() {
 			f2[1] = d3.format("$,.0");
 			f2[2] = d3.format(".0%");
 
-		// d3.json("/data_pages/sales_in_json.json", function(error, json) {
-		d3.csv("/data_pages/data_force_plot.csv", function(error, json) {
+		// d3.json("/data_pages/data_pdf_plot.json", function(error, json) {
+		d3.csv("/data_pages/data_force_plot_static.csv", function(error, json) {
 
 			// Print data load error
 			if(error) console.log(error);
@@ -348,7 +502,6 @@ $(document).ready(function() {
 							.on("mouseleave", function(d) {
 								d3.select(this).style({ "stroke":null, "stroke-width":null });
 								d3.select("#sale_details2").style("display", "none");
-
 							});
 			
 			// circle.append("svg:title")
@@ -479,12 +632,12 @@ $(document).ready(function() {
 				.style("font-weight", "normal")
 				.text("represents the value of a particular §363 sale as a percentage of the total value of all §363 sales.");
 
+		var total = document.getElementById("total_value_of_sales").innerHTML;
+
 		d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
 
 			// Print data load error
 			if(error) console.log(error);
-
-			// // TO ELIMINATE
 
 			// data = root;
 
@@ -504,10 +657,6 @@ $(document).ready(function() {
 			// root = newData;
 
 			// console.log(JSON.stringify(root))
-
-			// // END TO ELIMINATE
-
-			var total = document.getElementById("total_value_of_sales").innerHTML;
 
 			partition.value(function(d) { return d.winning_bid_1/10000; })
 					 .nodes(root)
