@@ -634,6 +634,7 @@ $(document).ready(function() {
 
 		var total = document.getElementById("total_value_of_sales").innerHTML;
 
+		// d3.json("/data_pages/data_sunburst.json", function(error, root) {
 		d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
 
 			// Print data load error
@@ -667,10 +668,9 @@ $(document).ready(function() {
 						d.fill = fill(d);
 					 });
 
-			// Now redefine the value function to use the previously-computed sum.
+			// // Now redefine the value function to use the previously-computed sum.
 			// partition.children(function(d, depth) { return depth < 2 ? d._children : null; })
 			// 		 .value(function(d) { return d.sum; });
-			// console.log(partition.nodes(root).slice(1))
 			var path = svg.selectAll("path .chunks")
 						  .data(partition.nodes(root).slice(1))
 						  .enter()

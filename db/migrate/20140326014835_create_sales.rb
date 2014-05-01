@@ -3,11 +3,11 @@ class CreateSales < ActiveRecord::Migration
     create_table :sales do |t|
       t.date :bankruptcy_filing_date, array: true, default: []
       t.text :debtor, array: true, default: []
-      t.integer :chapter, array: true, default: []
+      t.integer :chapter, array: true, default: [], limit: 2
       t.text :assets, array: true, default: []
       t.text :stalking_horse_parent, array: true, default: []
       t.text :stalking_horse, array: true, default: []
-      t.integer :stalking_horse_bid_1, array: true, default: []
+      t.integer :stalking_horse_bid_1, array: true, default: [], limit: 8
       t.text :stalking_horse_bid_text, array: true, default: []
       t.integer :breakup_fee_1, array: true, default: []
       t.integer :breakup_fee_2, array: true, default: []
@@ -18,7 +18,7 @@ class CreateSales < ActiveRecord::Migration
       t.text :bidder_list, array: true, default: []
       t.text :winner_parent, array: true, default: []
       t.text :winner, array: true, default: []
-      t.integer :winning_bid_1
+      t.integer :winning_bid_1, limit: 8
       t.text :winning_bid_text, array: true, default: []
       t.text :judge, array: true, default: []
       t.text :court, array: true, default: []
@@ -51,6 +51,10 @@ class CreateSales < ActiveRecord::Migration
       t.text :comments_on_bidding_procedures_order_filed
       t.text :comments_on_sale_order_filed
       t.text :comments_on_bankruptcy_case_closed
+      t.decimal :computation_breakup_fee_percentage_1
+      t.decimal :computation_breakup_fee_percentage_2
+      t.decimal :computation_required_overbid_percentage_1
+      t.decimal :computation_required_overbid_percentage_2
 
       t.timestamps
     end
