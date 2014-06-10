@@ -166,6 +166,37 @@ label, input, button, select, textarea {
 }
 
 /* search field */
+#free_trial_field {
+  /*input-block-level class from Bootstrap 2*/
+  display: block !important;
+  width: 100% !important;
+  min-height: 30px !important;
+  -webkit-box-sizing: border-box !important;
+     -moz-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  /*END input-block-level class from Bootstrap 2*/
+  /*override typeahead.js / form_for*/
+  border-color: #ccc !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  /*END override typeahead.js / form_for*/
+  margin: 0px 0px 16px 0px !important;
+  background-color: #fff !important;
+  font-size: 15px !important;
+}
+
+/* search button */
+#free_trial_button {
+  /*override typeahead.js / form_for */
+  background-color: #7459AF !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  /*END override typeahead.js / form_for */
+}
+
+/* search field */
 #search_field {
   /*input-block-level class from Bootstrap 2*/
   display: block !important;

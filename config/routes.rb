@@ -3,6 +3,7 @@ SampleApp::Application.routes.draw do
   # resources :sessions, only: [:new, :create, :destroy]
   
   root 'static_pages#home'
+  match '/request_free_trial', to: 'free_trials#request_free_trial', via: 'post'
   
   match '/help',  to: 'static_pages#help',  via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
