@@ -34,5 +34,27 @@ namespace :db do
                  short_firm_name: "Z Capital",
                  office_city: "Lake Forest, Illinois",
                  email_verified: false)
+    User.create!(fname: "Bhoomica",
+                 lname: "Reddy",
+                 preferred_name: "Bhoomica",
+                 email: "breddy@jefferies.com",
+                 password: "PIA^x^EW",
+                 password_confirmation: "PIA^x^EW",
+                 password_changed: false,
+                 firm_name: "Jefferies",
+                 short_firm_name: "Jefferies",
+                 office_city: "New York City",
+                 email_verified: false)
+    User.create!(fname: "Sid",
+                 lname: "Li",
+                 preferred_name: "Sid",
+                 email: "sidli@jefferies.com",
+                 password: "w4?pAFRa",
+                 password_confirmation: "w4?pAFRa",
+                 password_changed: false,
+                 firm_name: "Jefferies",
+                 short_firm_name: "Jefferies",
+                 office_city: "New York City",
+                 email_verified: false)
   end
 end
