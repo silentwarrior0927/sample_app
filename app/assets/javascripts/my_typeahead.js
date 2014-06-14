@@ -55,7 +55,9 @@ $(document).ready(function(){
                     'LifeCare Hospitals LLC', 
                     'Victor Oolitic Stone Company', 
                     'Coda Automotive Inc',
-                    'Residential Capital LLC'
+                    'Residential Capital LLC',
+                    'Event Rentals Inc',
+                    'Classic Party Rentals Inc'
                    ];
      
     $('.typeahead').typeahead({
