@@ -56,5 +56,16 @@ namespace :db do
                  short_firm_name: "Jefferies",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "William",
+                 lname: "Derrough",
+                 preferred_name: "Bill",
+                 email: "william.derrough@moelis.com",
+                 password: "PIA^x^EW",
+                 password_confirmation: "PIA^x^EW",
+                 password_changed: false,
+                 firm_name: "Moelis & Company",
+                 short_firm_name: "Moelis",
+                 office_city: "New York City",
+                 email_verified: false)
   end
 end
