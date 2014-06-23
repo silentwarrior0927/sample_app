@@ -605,10 +605,10 @@ $(document).ready(function() {
 					   .attr("class", "legend")
 					   .style("display", "block");
 		legend.append("text")
-				  .attr("x", 116 / 2)
-				  .attr("y", 14)
-				  .attr("text-anchor", "middle")
-				  .text("LEGEND:");
+			  .attr("x", 116 / 2)
+			  .attr("y", 14)
+			  .attr("text-anchor", "middle")
+			  .text("LEGEND:");
 		legend.append("text")
 			  .attr("x", 116)
 			  .attr("y", 8)

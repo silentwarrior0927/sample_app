@@ -67,5 +67,27 @@ namespace :db do
                  short_firm_name: "Moelis",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "Colin",
+                 lname: "Lee",
+                 preferred_name: "Colin",
+                 email: "clee@luzichpartners.com",
+                 password: "DFP4a}T/",
+                 password_confirmation: "DFP4a}T/",
+                 password_changed: false,
+                 firm_name: "Luzich Partners",
+                 short_firm_name: "Luzich Partners",
+                 office_city: "Las Vegas",
+                 email_verified: false)
+    User.create!(fname: "Sally",
+                 lname: "Henry",
+                 preferred_name: "Sally",
+                 email: "sally.henry@ttu.edu",
+                 password: "Fen^6^jQ",
+                 password_confirmation: "Fen^6^jQ",
+                 password_changed: false,
+                 firm_name: "Texas Tech University",
+                 short_firm_name: "Texas Tech",
+                 office_city: "Lubbock, Texas",
+                 email_verified: false)
   end
 end
