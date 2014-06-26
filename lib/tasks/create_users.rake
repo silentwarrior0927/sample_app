@@ -111,6 +111,17 @@ namespace :db do
                  short_firm_name: "Zolfo Cooper",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "Ira",
+                 lname: "Herman",
+                 preferred_name: "Ira",
+                 email: "ira.herman@tklaw.com",
+                 password: "Fen^6^jQ",
+                 password_confirmation: "Fen^6^jQ",
+                 password_changed: false,
+                 firm_name: "Thompson & Knight",
+                 short_firm_name: "Thompson & Knight",
+                 office_city: "New York City",
+                 email_verified: false)
 
   end
 end
