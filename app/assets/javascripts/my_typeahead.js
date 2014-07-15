@@ -57,7 +57,9 @@ $(document).ready(function(){
                     'Coda Automotive Inc',
                     'Residential Capital LLC',
                     'Event Rentals Inc',
-                    'Classic Party Rentals Inc'
+                    'Classic Party Rentals Inc',
+                    'Furniture Brands International Inc',
+                    'Allied Systems Holdings Inc'
                    ];
      
     $('.typeahead').typeahead({
