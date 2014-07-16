@@ -188,6 +188,28 @@ namespace :db do
                  short_firm_name: "Blackstone",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "John-Paul",
+                 lname: "Hanson",
+                 preferred_name: "John-Paul",
+                 email: "jhanson@hl.com",
+                 password: "hltrial",
+                 password_confirmation: "hltrial",
+                 password_changed: false,
+                 firm_name: "Houlihan Lokey",
+                 short_firm_name: "Houlihan Lokey",
+                 office_city: "New York City",
+                 email_verified: false)
+    User.create!(fname: "William",
+                 lname: "Hardie",
+                 preferred_name: "Tuck",
+                 email: "whardie@hl.com",
+                 password: "hltrial",
+                 password_confirmation: "hltrial",
+                 password_changed: false,
+                 firm_name: "Houlihan Lokey",
+                 short_firm_name: "Houlihan Lokey",
+                 office_city: "New York City",
+                 email_verified: false)
 
   end
 end
