@@ -166,6 +166,17 @@ namespace :db do
                  short_firm_name: "Rothschild",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "Andrew",
+                 lname: "Morley",
+                 preferred_name: "Andrew",
+                 email: "andrew.morley@rothschild.com",
+                 password: "Fen^6^jQ",
+                 password_confirmation: "Fen^6^jQ",
+                 password_changed: false,
+                 firm_name: "Rothschild",
+                 short_firm_name: "Rothschild",
+                 office_city: "New York City",
+                 email_verified: false)
     User.create!(fname: "Jay",
                  lname: "Goffman",
                  preferred_name: "Jay",
