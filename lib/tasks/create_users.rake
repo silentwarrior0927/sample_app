@@ -199,6 +199,17 @@ namespace :db do
                  short_firm_name: "Blackstone",
                  office_city: "New York City",
                  email_verified: false)
+    User.create!(fname: "Jonathan",
+                 lname: "Vaughan",
+                 preferred_name: "Jonathan",
+                 email: "jonathan.vaughan@blackstone.com",
+                 password: "bxtrial",
+                 password_confirmation: "bxtrial",
+                 password_changed: false,
+                 firm_name: "Blackstone",
+                 short_firm_name: "Blackstone",
+                 office_city: "New York City",
+                 email_verified: false)
     User.create!(fname: "John-Paul",
                  lname: "Hanson",
                  preferred_name: "John-Paul",
