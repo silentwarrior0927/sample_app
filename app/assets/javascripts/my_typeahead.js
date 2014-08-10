@@ -59,7 +59,11 @@ $(document).ready(function(){
                     'Event Rentals Inc',
                     'Classic Party Rentals Inc',
                     'Furniture Brands International Inc',
-                    'Allied Systems Holdings Inc'
+                    'Allied Systems Holdings Inc',
+                    'Coldwater Creek Inc',
+                    'Florida Gaming Centers Inc',
+                    'First Mariner Bancorp',
+                    'Allens Inc'
                    ];
      
     $('.typeahead').typeahead({
