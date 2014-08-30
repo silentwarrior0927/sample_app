@@ -63,7 +63,8 @@ $(document).ready(function(){
                     'Coldwater Creek Inc',
                     'Florida Gaming Centers Inc',
                     'First Mariner Bancorp',
-                    'Allens Inc'
+                    'Allens Inc',
+                    'Orchard Supply Hardware Stores Corp',
                    ];
      
     $('.typeahead').typeahead({

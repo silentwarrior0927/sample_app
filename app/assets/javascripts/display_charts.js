@@ -636,9 +636,9 @@ $(document).ready(function() {
 
 		// d3.json("/data_pages/data_sunburst.json", function(error, root) {
 		d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
-
-			// Print data load error
-			if(error) console.log(error);
+			
+			// // Print data load error
+			// if(error) console.log(error);
 
 			// data = root;
 

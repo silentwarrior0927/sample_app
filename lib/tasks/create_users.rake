@@ -232,6 +232,5 @@ namespace :db do
                  short_firm_name: "Houlihan Lokey",
                  office_city: "New York City",
                  email_verified: false)
-
   end
 end
