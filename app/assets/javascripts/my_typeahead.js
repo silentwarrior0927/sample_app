@@ -65,6 +65,7 @@ $(document).ready(function(){
                     'First Mariner Bancorp',
                     'Allens Inc',
                     'Orchard Supply Hardware Stores Corp',
+                    'TLO LLC',
                    ];
      
     $('.typeahead').typeahead({

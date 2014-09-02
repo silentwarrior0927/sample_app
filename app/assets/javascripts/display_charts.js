@@ -634,30 +634,30 @@ $(document).ready(function() {
 
 		var total = document.getElementById("total_value_of_sales").innerHTML;
 
-		// d3.json("/data_pages/data_sunburst.json", function(error, root) {
-		d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
+		d3.json("/data_pages/data_sunburst.json", function(error, root) {
+		// d3.json("/data_pages/data_sunburst_static.json", function(error, root) {
 			
-			// // Print data load error
-			// if(error) console.log(error);
+			// Print data load error
+			if(error) console.log(error);
 
-			// data = root;
+			data = root;
 
-			// var newData = {"name": "root", "children": {}}
+			var newData = {"name": "root", "children": {}}
 
-			// data.forEach(function (d) {
-			// 	if (typeof newData.children[d.debtor_counsel[0]] !== 'undefined') {
-			// 		newData.children[d.debtor_counsel[0]].children.push(d)
-			// 	} else {
-			// 		newData.children[d.debtor_counsel[0]] = {"name": d.debtor_counsel[0], "children": [d]}
-			// 	}
-			// })
-			// newData.children = Object.keys(newData.children).map(function (key) {
-			// 	return newData.children[key];
-			// });
+			data.forEach(function (d) {
+				if (typeof newData.children[d.debtor_counsel[0]] !== 'undefined') {
+					newData.children[d.debtor_counsel[0]].children.push(d)
+				} else {
+					newData.children[d.debtor_counsel[0]] = {"name": d.debtor_counsel[0], "children": [d]}
+				}
+			})
+			newData.children = Object.keys(newData.children).map(function (key) {
+				return newData.children[key];
+			});
 
-			// root = newData;
+			root = newData;
 
-			// console.log(JSON.stringify(root))
+			console.log(JSON.stringify(root))
 
 			partition.value(function(d) { return d.winning_bid_1/10000; })
 					 .nodes(root)
