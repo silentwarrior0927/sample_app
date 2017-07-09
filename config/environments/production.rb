@@ -82,9 +82,9 @@ SampleApp::Application.configure do
 
   ActionMailer::Base.smtp_settings = {
     :port =>           '587',
-    :address =>        'smtp.mandrillapp.com',
-    :user_name =>      ENV['MANDRILL_USERNAME'],
-    :password =>       ENV['MANDRILL_APIKEY'],
+    :address =>        'smtp.gmail  .com',
+    :user_name =>      ENV["GMAIL_USERNAME"],
+    :password =>       ENV["GMAIL_PASSWORD"]
     :domain =>         'heroku.com',
     :authentication => :plain
   }
