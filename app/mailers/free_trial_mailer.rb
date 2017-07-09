@@ -1,10 +1,10 @@
 class FreeTrialMailer < ActionMailer::Base
   
-  default from: 'john.hartsfeld@363live.com'
+  default from: 'xiaoyang.zhuang@alumni.duke.edu'
 
   def free_trial_email(email)
   	@email = email
-  	mail(to: 'john.hartsfeld@363live.com', subject: 'Free trial requested')
+  	mail(to: 'xiaoyang.zhuang@alumni.duke.edu', subject: 'Free trial requested')
   end
 
 end
