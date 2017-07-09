@@ -4,7 +4,7 @@ class FreeTrialMailer < ActionMailer::Base
 
   def free_trial_email(email)
   	@email = email
-  	mail(to: 'xiaoyang.zhuang1@gmail.com', subject: 'Free trial requested')
+  	#mail(to: 'xiaoyang.zhuang1@gmail.com', subject: 'Free trial requested')
   end
 
 end
