@@ -5,7 +5,7 @@ class SearchMailer < ActionMailer::Base
   def search_notification_email(user, query)
   	@user = user
   	@query = query
-  	mail(to: 'xiaoyang.zhuang1@gmail.com', subject: 'User has made a search')
+  	#mail(to: 'xiaoyang.zhuang1@gmail.com', subject: 'User has made a search')
   end
 
 end
